@@ -73,9 +73,10 @@ public class PlayerController : MonoBehaviour {
 			GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpforce, ForceMode2D.Impulse);
 			isJumping = true;
 		}
-
-		//縦方向の速度が0なら着地した判定（ガバガバだから修正必要
-		if (GetComponent<Rigidbody2D> ().velocity.y == 0) {
+			
+		//y軸方向の速度が0かつ足がついているときにジャンプできるようにする
+		//すりぬけ防止 Rigidbody2DのCollision DetectionをContinuousへ
+		if (GetComponent<Rigidbody2D> ().velocity.y == 0 && GetComponent<CircleCollider2D> ().IsTouchingLayers() == true) {
 			isJumping = false;
 		}
 
