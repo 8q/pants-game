@@ -6,9 +6,13 @@ public class GameSystemScript : MonoBehaviour {
 	
 	public int[] pantsCounts;
 
+	public Canvas uiCanvas;
+
 	public Text[] texts;
 
-	public Canvas uiCanvas;
+	public Image[] zankiImages;
+
+	public int zanki; //現在の残機
 
 	// Use this for initialization
 	void Start () {
@@ -23,5 +27,27 @@ public class GameSystemScript : MonoBehaviour {
 	public void AddPantsCount(int index){
 		pantsCounts [index]++;
 		texts [index].text = pantsCounts [index].ToString ();
+	}
+
+	public void DecreaseZanki(){
+		//ひとまずデバッグ用
+		if (zanki == 0)
+			return;
+
+		zanki--;
+		int index = zanki;
+		Destroy (zankiImages[index]);
+		if (zanki == 0) {
+			MoveNextFades ();
+		}
+	}
+
+
+	//パンツの数で分岐 //残機が0の場合ゲームオーバー
+	public void MoveNextFades(){
+		if (zanki <= 0) {
+
+		}
+		//if(pantsCounts[0] <= )
 	}
 }
