@@ -41,17 +41,17 @@ public class GameSystemScript : MonoBehaviour {
 		Destroy (zankiImages[index]);
 		if (zanki == 0) {
 			SerGameOverFlag (true);
-			MoveNextFades ();
+			MoveNextPhase ();
 		}
 	}
 
 
 	//パンツの数で分岐 //GameOverFlagが立っている場合ゲームオーバー
-	public void MoveNextFades(){
+	public void MoveNextPhase(){
 		if (gameOverFlag == true) {
 			Debug.Log ("GameOver");
 		} else {
-			Debug.Log ("MoveNextFades");
+			Debug.Log ("MoveNextPhase");
 		}
 		//if(pantsCounts[0] <= )
 	}

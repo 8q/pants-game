@@ -28,6 +28,6 @@ public class TimeController: MonoBehaviour {
 				break;
 		}
 		gameSystemScript.SerGameOverFlag (true);
-		gameSystemScript.MoveNextFades();
+		gameSystemScript.MoveNextPhase();
 	}
 }
