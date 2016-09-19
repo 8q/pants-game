@@ -3,7 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameSystemScript : MonoBehaviour {
-	
+
+	private bool gameOverFlag = false;
+
 	public int[] pantsCounts;
 
 	public Canvas uiCanvas;
@@ -38,16 +40,24 @@ public class GameSystemScript : MonoBehaviour {
 		int index = zanki;
 		Destroy (zankiImages[index]);
 		if (zanki == 0) {
+			SerGameOverFlag (true);
 			MoveNextFades ();
 		}
 	}
 
 
-	//パンツの数で分岐 //残機が0の場合ゲームオーバー
+	//パンツの数で分岐 //GameOverFlagが立っている場合ゲームオーバー
 	public void MoveNextFades(){
-		if (zanki <= 0) {
-
+		if (gameOverFlag == true) {
+			Debug.Log ("GameOver");
+		} else {
+			Debug.Log ("MoveNextFades");
 		}
 		//if(pantsCounts[0] <= )
 	}
+
+	public void SerGameOverFlag(bool isGameOver){
+		gameOverFlag = isGameOver;
+	}
+
 }
