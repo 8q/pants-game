@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (speed);
 		//加速、減速処理。AddForceが上手く行かないので無理矢理
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			GetComponent<SpriteRenderer> ().sprite = sprites [RUNNING]; //走っている画像に差し替え
