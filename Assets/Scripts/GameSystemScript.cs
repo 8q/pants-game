@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameSystemScript : MonoBehaviour {
 
-	private bool gameOverFlag = false;
+	public bool IsGameOver { get; set; }
 
 	public int[] pantsCounts;
 
@@ -16,9 +16,10 @@ public class GameSystemScript : MonoBehaviour {
 
 	public int zanki; //現在の残機
 
+
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 
 	// Update is called once per frame
@@ -40,7 +41,7 @@ public class GameSystemScript : MonoBehaviour {
 		int index = zanki;
 		Destroy (zankiImages[index]);
 		if (zanki == 0) {
-			SerGameOverFlag (true);
+			IsGameOver = true;
 			MoveNextPhase ();
 		}
 	}
@@ -48,16 +49,13 @@ public class GameSystemScript : MonoBehaviour {
 
 	//パンツの数で分岐 //GameOverFlagが立っている場合ゲームオーバー
 	public void MoveNextPhase(){
-		if (gameOverFlag == true) {
+		if (IsGameOver) {
 			Debug.Log ("GameOver");
 		} else {
 			Debug.Log ("MoveNextPhase");
 		}
 		//if(pantsCounts[0] <= )
 	}
-
-	public void SerGameOverFlag(bool isGameOver){
-		gameOverFlag = isGameOver;
-	}
+		
 
 }

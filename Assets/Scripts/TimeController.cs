@@ -16,18 +16,17 @@ public class TimeController: MonoBehaviour {
 	void Start () {
 		timeText = GetComponent<Text> ();
 		gameSystemScript = (GameSystemScript)(GameObject.Find("GameSystem").GetComponent("GameSystemScript"));
-		StartCoroutine(Timer());
-	}
-
-	IEnumerator Timer(){
-		while(true){
-			yield return new WaitForSeconds(waitingTime);
-			remainTime--;
-			timeText.text = remainTime.ToString ();
-			if (remainTime == 0)
-				break;
-		}
-		gameSystemScript.SerGameOverFlag (true);
-		gameSystemScript.MoveNextPhase();
+		StartCoroutine(this.TimerMethod(waitingTime, 
+			() => {},
+			() => {
+				remainTime--;
+				timeText.text = remainTime.ToString ();
+			},
+			() => remainTime == 0,
+			() => {
+				gameSystemScript.IsGameOver = true;
+				gameSystemScript.MoveNextPhase();
+			}
+		));
 	}
 }

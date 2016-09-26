@@ -24,10 +24,31 @@ public class PlayerController : MonoBehaviour {
 	//画像
 	public Sprite[] sprites;
 
+	//無敵時間（秒）
+	public float invincibleTime;
+
 	//止まっているときのインデックス
 	private const int STOPPING = 0;
 	//走っている時のインデックス
 	private const int RUNNING = 1;
+
+	//無敵モードか
+	private bool isInvincible = false;
+	public bool IsInvincible 
+	{
+		get { return isInvincible; }
+		set {
+			isInvincible = value;
+			if(value == true)
+			{
+				GetComponent<SpriteRenderer> ().color = new Color(1.0f,1.0f,1.0f, 0.3f);
+				StartCoroutine (this.DelayMethod(invincibleTime, () => {
+					GetComponent<SpriteRenderer> ().color = new Color(1.0f,1.0f,1.0f, 1.0f);
+					isInvincible = false;
+				}));
+			}
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -85,5 +106,5 @@ public class PlayerController : MonoBehaviour {
 		GetComponent<Rigidbody2D> ().velocity = vector;
 
 	}
-
+		
 }
