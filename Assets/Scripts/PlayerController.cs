@@ -21,16 +21,8 @@ public class PlayerController : MonoBehaviour {
 	//速さ最大
 	public float maxspeed;
 
-	//画像
-	public Sprite[] sprites;
-
 	//無敵時間（秒）
 	public float invincibleTime;
-
-	//止まっているときのインデックス
-	private const int STOPPING = 0;
-	//走っている時のインデックス
-	private const int RUNNING = 1;
 
 	//無敵モードか
 	private bool isInvincible = false;
@@ -59,23 +51,24 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		//加速、減速処理。AddForceが上手く行かないので無理矢理
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			GetComponent<SpriteRenderer> ().sprite = sprites [RUNNING]; //走っている画像に差し替え
 			GetComponent<SpriteRenderer> ().flipX = false; //画像を反転しない
+			GetComponent<Animator>().SetBool("isRunning", true);
 			speed += diffspeed;
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
-			GetComponent<SpriteRenderer> ().sprite = sprites [RUNNING];
 			GetComponent<SpriteRenderer> ().flipX = true; //画像を反転
+			GetComponent<Animator>().SetBool("isRunning", true);
 			speed -= diffspeed;
 		} else {
-			GetComponent<SpriteRenderer> ().sprite = sprites [STOPPING];
 			if (speed > 0) {
 				speed -= diffspeed;
-				if (speed < 0) {
+				if (speed <= 0) {
+					GetComponent<Animator>().SetBool("isRunning", false);
 					speed = 0;
 				}
 			} else if (speed < 0) {
 				speed += diffspeed;
-				if (speed > 0) {
+				if (speed >= 0) {
+					GetComponent<Animator>().SetBool("isRunning", false);
 					speed = 0;
 				}
 			}
