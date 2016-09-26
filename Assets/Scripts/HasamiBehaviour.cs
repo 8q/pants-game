@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HasamiBehavior : MonoBehaviour {
+public class HasamiBehaviour : MonoBehaviour {
 
 	private GameSystemScript gameSystemScript;
 	private PlayerController playerController;

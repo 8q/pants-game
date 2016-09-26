@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PantsBehavior : MonoBehaviour {
+public class PantsBehaviour : MonoBehaviour {
 
 	public int pantsIndex;
 
