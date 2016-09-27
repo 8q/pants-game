@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//https://github.com/unity3d-jp-tutorials/2d-shooting-game/wiki/%E7%AC%AC02%E5%9B%9E-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E7%A7%BB%E5%8B%95
-//http://www.go-next.co.jp/blog/web/10988/
-
 public class PlayerController : MonoBehaviour {
 	
 	// 移動スピード
@@ -13,16 +10,19 @@ public class PlayerController : MonoBehaviour {
 	private bool isJumping = false;
 
 	//飛ぶ力
-	public float jumpforce;
+	public float jumpForce;
 
 	//速さ変化量
-	public float diffspeed;
+	public float diffSpeed;
 
 	//速さ最大
-	public float maxspeed;
+	public float maxSpeed;
 
 	//無敵時間（秒）
 	public float invincibleTime;
+
+	//無敵モードのときの透過率
+	public float invincibleAlpha;
 
 	//無敵モードか
 	private bool isInvincible = false;
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 			isInvincible = value;
 			if(value == true)
 			{
-				GetComponent<SpriteRenderer> ().color = new Color(1.0f,1.0f,1.0f, 0.3f);
+				GetComponent<SpriteRenderer> ().color = new Color(1.0f,1.0f,1.0f, invincibleAlpha);
 				StartCoroutine (this.DelayMethod(invincibleTime, () => {
 					GetComponent<SpriteRenderer> ().color = new Color(1.0f,1.0f,1.0f, 1.0f);
 					isInvincible = false;
@@ -50,23 +50,24 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//加速、減速処理。AddForceが上手く行かないので無理矢理
+		//speedが0以外のときは走っているアニメーションに切り替え
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			GetComponent<SpriteRenderer> ().flipX = false; //画像を反転しない
 			GetComponent<Animator>().SetBool("isRunning", true);
-			speed += diffspeed;
+			speed += diffSpeed;
 		} else if (Input.GetKey (KeyCode.LeftArrow)) {
 			GetComponent<SpriteRenderer> ().flipX = true; //画像を反転
 			GetComponent<Animator>().SetBool("isRunning", true);
-			speed -= diffspeed;
+			speed -= diffSpeed;
 		} else {
 			if (speed > 0) {
-				speed -= diffspeed;
+				speed -= diffSpeed;
 				if (speed <= 0) {
 					GetComponent<Animator>().SetBool("isRunning", false);
 					speed = 0;
 				}
 			} else if (speed < 0) {
-				speed += diffspeed;
+				speed += diffSpeed;
 				if (speed >= 0) {
 					GetComponent<Animator>().SetBool("isRunning", false);
 					speed = 0;
@@ -75,22 +76,25 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//一定の速さでそれ以上加速しない
-		if (speed > maxspeed) {
-			speed = maxspeed;
-		} else if (speed < -maxspeed) {
-			speed = -maxspeed;
+		if (speed > maxSpeed) {
+			speed = maxSpeed;
+		} else if (speed < -maxSpeed) {
+			speed = -maxSpeed;
 		}
 			
 		//ジャンプ
+		//跳んでいる間はアニメーションを停止
 		if (Input.GetKey (KeyCode.Space) && !isJumping) {
-			GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpforce, ForceMode2D.Impulse);
+			GetComponent<Rigidbody2D> ().AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 			isJumping = true;
+			GetComponent<Animator> ().enabled = false;
 		}
 			
 		//y軸方向の速度が0かつ足がついているときにジャンプできるようにする
 		//すりぬけ防止 Rigidbody2DのCollision DetectionをContinuousへ
 		if (GetComponent<Rigidbody2D> ().velocity.y == 0 && GetComponent<CircleCollider2D> ().IsTouchingLayers() == true) {
 			isJumping = false;
+			GetComponent<Animator> ().enabled = true;
 		}
 
 		//横方向の速さを設定
