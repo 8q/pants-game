@@ -19,9 +19,10 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="airi" storage=airi3 scale="0.3" y=-1 jname="愛莉" jcolor="#249390"]
+[chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
 
 [chara_face name="airi" face="puzzling" storage=airi2 ]
+[chara_face name="airi" face="smile" storage=airi3 ]
 
 #主人公
 パンツを奪うことを特別に許可すると言われても、[l][r]私の良心がとても許さない…。[p]
@@ -42,6 +43,7 @@
 
 ;キャラクターを表示
 [chara_show name="airi" ]
+[playbgm wait=false storage="pants_mion(loopver)"]
 
 #???
 おーい、お姉さん。[p]
@@ -62,7 +64,7 @@
 すみません、[l]心の声が…[p]
 
 [chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.3" y=-1 ]
+[chara_pos name="airi" scale="0.5" y=-1 ]
 [chara_mod name="airi" face="default"]
 [wait time=0.5 ]
 #???
@@ -75,13 +77,21 @@
 #主人公
 助かりました。[l]ありがとうございます。[p]
 
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.3" y=-1 ]
+[chara_mod name="airi" face="smile"]
+[wait time=0.5 ]
 #???
 いいってことよ！[p]
-人間、[l]持ちつ持たれつ、[l]だからね！[p]
+人間、持ちつ持たれつ、[l]だからね！[p]
 
 #主人公
 今度会ったらお礼をさせてください。[p]
 
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.5" y=-1 ]
+[chara_mod name="airi" face="default"]
+[wait time=0.5 ]
 #???
 いいのいいの、[l]気にしないで。[p]
 
@@ -91,6 +101,11 @@
 #???
 んーじゃあそうね。[p]
 わたしよくここのプール来るし…[p]
+
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.3" y=-1 ]
+[chara_mod name="airi" face="smile"]
+[wait time=0.5 ]
 次会ったら、イチゴ・オレでもちょうだいな！[p]
 では、アディオスッ！[p]
 
