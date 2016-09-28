@@ -5,6 +5,8 @@ public class CameraController : MonoBehaviour {
 	private GameObject player;
 	private float worldWidth;
 
+	public GameObject door; //ドアより向こう側には移動できないようにするため
+
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
 		Vector3 topLeft = GetScreenTopLeft();
@@ -18,6 +20,12 @@ public class CameraController : MonoBehaviour {
 		if (player.transform.position.x < topLeft.x) {
 			Vector3 newPosition = player.transform.position;
 			newPosition.x = topLeft.x;
+			player.transform.position = newPosition;
+		}
+		//ドアより向こう側には行けないようにする
+		if (door.transform.position.x < player.transform.position.x) {
+			Vector3 newPosition = player.transform.position;
+			newPosition.x = door.transform.position.x;
 			player.transform.position = newPosition;
 		}
 		//中央過ぎると画面追従
