@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using Novel;
 
 public class GameSystemScript : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class GameSystemScript : MonoBehaviour {
 
 	public Text[] texts;
 
-	public Image[] zankiImages;
+	public UnityEngine.UI.Image[] zankiImages;
 
 	public int zanki; //現在の残機
 
@@ -62,14 +63,18 @@ public class GameSystemScript : MonoBehaviour {
 		switch(maxCount.I){
 		case 0: //あいり
 			Debug.Log ("Airi");
+			NovelSingleton.StatusManager.callJoker("wide/stage1_aft","");
 			break;
 		case 1: //みおん
 			Debug.Log ("Mion");
+			NovelSingleton.StatusManager.callJoker("wide/stage1_aft","");
 			break;
 		case 2: //うみの
 			Debug.Log ("Umino");
+			NovelSingleton.StatusManager.callJoker("wide/stage1_aft","");
 			break;
 		default:
+			Debug.Log ("Move Next Phase Error");
 			break;
 		}
 	}
