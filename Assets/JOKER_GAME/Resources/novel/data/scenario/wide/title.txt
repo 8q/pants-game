@@ -1,7 +1,7 @@
 
 *title
 ;タイトル画面
-[bg_new name="background" layer="background" storage="title"]
+[bg_new name="background" layer="background" storage="pants_title"]
 [bg_show name="background"]
 
 ;開始ボタンとロードボタンを実装
@@ -27,7 +27,7 @@
 @bg_hide name="background" time=1.5
 
 [wait time=2]
-@jump file=wide/scene1 scene=new
+@jump file=wide/intro scene=new
 
 *click_load
 [playse storage="start"]

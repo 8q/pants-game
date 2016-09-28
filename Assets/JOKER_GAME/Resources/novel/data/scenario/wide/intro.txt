@@ -1,0 +1,60 @@
+;チュートリアル用スクリプトファイル
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+;背景の新規定義
+[bg_new storage="room"]
+
+;背景の表示
+[bg_show ]
+
+;キャラクターの宣言
+[chara_new name=sha storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+
+;キャラクターを表示
+[show name=sha]
+
+[wait time=2]
+
+#sha
+世界はレース不足に陥っている。[p]
+そこで君たちにレースを収集する任務を課す。[p]
+君の配属先はーーー[l][r]
+パンツ回収精鋭部隊、だ。[p]
+なおこの任務は極秘ミッションであるから、[p]
+くれぐれも一般市民にレースを回収していることを[r]悟られないように。[p]
+それと
+*001_return
+これは時間を急ぐ任務であるから、[l][r]パンツを盗むことを国家権限で許可する。[p]
+このゲームの世界でだけだぞ。[p]
+本当に特別に、だ。[p]
+そこのところはよく心に留めてくれ。[p]
+
+[select_new text="わかった。" target=*001_yes ]
+[select_new text="それはできない。" target=*001_no ]
+
+[select_show sound=click ]
+
+[s]
+
+*001_no
+ええと…[l]ちゃんと聞いていたかな？[p]
+もう一度だけ言うからよく聞け。[p]
+@jump target=*001_return
+
+*001_yes
+良い返事だ。[p]
+
+では、レースのたくさんついたパンツの回収に[r]励んでくれたまえ。[p]
+
+[scene file="stage1"]
