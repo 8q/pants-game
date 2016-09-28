@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameSystemScript : MonoBehaviour {
 
@@ -52,7 +53,7 @@ public class GameSystemScript : MonoBehaviour {
 	public void MoveNextPhase(){
 		if (IsGameOver) {
 			//Debug.Log ("GameOver");
-			Application.LoadLevel("stage1");
+			SceneManager.LoadScene("stage1");
 			return;
 		} 
 
