@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Linq;
 
 public class GameSystemScript : MonoBehaviour {
 
@@ -34,8 +35,8 @@ public class GameSystemScript : MonoBehaviour {
 
 	public void DecreaseZanki(){
 		//ひとまずデバッグ用
-		if (zanki == 0)
-			return;
+//		if (zanki == 0)
+//			return;
 
 		zanki--;
 		int index = zanki;
@@ -50,11 +51,26 @@ public class GameSystemScript : MonoBehaviour {
 	//パンツの数で分岐 //GameOverFlagが立っている場合ゲームオーバー
 	public void MoveNextPhase(){
 		if (IsGameOver) {
-			Debug.Log ("GameOver");
-		} else {
-			Debug.Log ("MoveNextPhase");
+			//Debug.Log ("GameOver");
+			Application.LoadLevel("stage1");
+			return;
+		} 
+
+		var maxCount = pantsCounts.Select((val, index) => new { V = val, I = index })
+			.Aggregate((max, working) => (max.V > working.V) ? max : working);
+		switch(maxCount.I){
+		case 0: //あいり
+			Debug.Log ("Airi");
+			break;
+		case 1: //みおん
+			Debug.Log ("Mion");
+			break;
+		case 2: //うみの
+			Debug.Log ("Umino");
+			break;
+		default:
+			break;
 		}
-		//if(pantsCounts[0] <= )
 	}
 		
 
