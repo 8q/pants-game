@@ -5,7 +5,7 @@ public class BackgroundContorller : MonoBehaviour {
 	
 	private GameObject mcamera;
 	private Vector3 preCameraPosition;
-	public float scrollSize = 0.05f; 
+	public float scrollSize; 
 
 	// Use this for initialization
 	void Start () {
