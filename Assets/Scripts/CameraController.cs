@@ -22,10 +22,10 @@ public class CameraController : MonoBehaviour {
 			newPosition.x = topLeft.x;
 			player.transform.position = newPosition;
 		}
-		//ドアより向こう側にはあまり行けないようにする
-		if (door.transform.position.x + 10.0f < player.transform.position.x) {
+		//ドアより向こう側には行けないようにする
+		if (door.transform.position.x < player.transform.position.x) {
 			Vector3 newPosition = player.transform.position;
-			newPosition.x = door.transform.position.x + 10.0f;
+			newPosition.x = door.transform.position.x;
 			player.transform.position = newPosition;
 		}
 		//中央過ぎると画面追従
