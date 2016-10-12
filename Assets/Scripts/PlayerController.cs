@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour {
 			
 		//y軸方向の速度が0かつ足がついているときにジャンプできるようにする
 		//すりぬけ防止 Rigidbody2DのCollision DetectionをContinuousへ
-		if (GetComponent<Rigidbody2D> ().velocity.y == 0 && GetComponent<CircleCollider2D> ().IsTouchingLayers() == true) {
+		if (GetComponent<Rigidbody2D> ().velocity.y == 0 && GetComponent<EdgeCollider2D> ().IsTouchingLayers() == true) {
 			isJumping = false;
 			GetComponent<Animator> ().enabled = true;
 		}
