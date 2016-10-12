@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	
+
 	// 移動スピード
 	private float speed = 0.0f;
 
