@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 
+//http://albatrus.com/main/unity/5698
 public class CameraFade : MonoBehaviour
 {
     private static CameraFade mInstance = null;

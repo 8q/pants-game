@@ -35,7 +35,8 @@ public class TatsumakiBehavior : MonoBehaviour {
 		colliders[currentColliderIndex].enabled = true;
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnTriggerEnter2D(Collider2D other) 
+	{
 		if (other.gameObject.tag == "Player" && playerController.IsInvincible == false) {
 			playerController.IsInvincible = true;
 			gameSystemScript.DecreaseZanki ();

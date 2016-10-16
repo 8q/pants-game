@@ -19,6 +19,8 @@ public class GameSystemScript : MonoBehaviour {
 
 	public int zanki; //現在の残機
 
+	public string sceneName; //このシーンの名前
+
 
 	// Use this for initialization
 	void Start () {
@@ -56,7 +58,10 @@ public class GameSystemScript : MonoBehaviour {
 
             //Debug.Log ("GameOver");
 
-            CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () => { SceneManager.LoadScene("gameover"); });
+            CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () => { 
+				GameOverScript.CurrentSceneName = sceneName;
+				SceneManager.LoadScene("gameover"); 
+			});
             return;
 		} 
 
