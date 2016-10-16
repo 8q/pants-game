@@ -15,7 +15,6 @@ public class StartTextBehaviour : MonoBehaviour {
         StartText.text = "START!";
         yield return new WaitForSeconds(0.4f);
 
-        Debug.Log(Time.deltaTime);
         int i = 0;
         for (int fontsize = 200; fontsize < 800; fontsize+=10)
         {

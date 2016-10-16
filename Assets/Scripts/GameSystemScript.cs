@@ -53,9 +53,11 @@ public class GameSystemScript : MonoBehaviour {
 	//パンツの数で分岐 //GameOverFlagが立っている場合ゲームオーバー
 	public void MoveNextPhase(){
 		if (IsGameOver) {
-			//Debug.Log ("GameOver");
-			SceneManager.LoadScene("stage1");
-			return;
+
+            //Debug.Log ("GameOver");
+
+            CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () => { SceneManager.LoadScene("gameover"); });
+            return;
 		} 
 
 		var maxCount = pantsCounts.Select((val, index) => new { V = val, I = index })
