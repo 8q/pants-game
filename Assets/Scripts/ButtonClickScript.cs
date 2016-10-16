@@ -10,13 +10,7 @@ public class ButtonClickScript : MonoBehaviour
 
     public void ContinueClick()
     {
-        SceneManager.LoadScene(SceneManager.GetSceneAt(1).name);
-
-    }
-
-    public void Retrylick()
-    {
-        SceneManager.LoadScene(SceneManager.GetSceneAt(1).name);
+        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
     }
 
     public void TitleClick()
