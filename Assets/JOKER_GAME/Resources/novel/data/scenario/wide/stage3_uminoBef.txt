@@ -1,0 +1,52 @@
+
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+;背景の新規定義
+[bg_new storage="rouka"]
+
+;背景の表示
+[bg_show ]
+
+;キャラクターの宣言
+[chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+[chara_face name="umino" face="puzzling" storage=umino2 ]
+[chara_face name="umino" face="smile" storage=umino3 ]
+
+
+#海野さん
+「…………………………………………。」
+#主人公
+「！？」
+#海野さん
+「……………………………こんばんは。」
+#主人公
+「あなたの言う綻びの根源に、たどり着きそうにないのだけれど。」
+#海野さん
+「…………………………………………。」
+「………………最後まで足掻く気持ちのあるあなたなら大丈夫、と。」
+#主人公
+「？」
+#海野さん
+「………………このクラゲを見ていて。」
+#主人公
+「！？」
+#海野さん
+「今から連れて行くのは、この世界と重なっているもう一つの世界。」
+「科学では観測できない、神性な生き物の世界。」
+#主人公
+「ちょっ！？」
+#海野さん
+「向こうで待っているから、頑張ってたどり着いて。」
+
+;[scene file="stage3"]

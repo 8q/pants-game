@@ -1,0 +1,70 @@
+
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+;背景の新規定義
+[bg_new storage="rouka"]
+
+;背景の表示
+[bg_show ]
+
+;キャラクターの宣言
+[chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+
+[chara_face name="airi" face="puzzling" storage=airi2 ]
+[chara_face name="airi" face="smile" storage=airi3 ]
+
+あと１日で国が滅びる日。
+手は尽くしたけれど、目標のパンツ回収量にはまだ届いていない…。
+
+#？？？
+「お〜〜〜い！」
+「ちょっとー！わたしの声聞こえてる？」
+#主人公
+「愛莉さん…！？」
+#愛莉
+「相当思いつめているみたいね…。」
+「で？その後お仕事はどうよ？」
+#主人公
+「進捗ダメです…。」
+#愛莉
+「そっかあ。まあ誰だってパンツあげたくはないよね。」
+#主人公
+「もう、間に合いそうもなくて…。」
+#愛莉
+「んー、じゃあさ。」
+「わたしがついているから、プールでパンツをくださいってお願いしてみない？」
+#主人公
+「そんなっ！皆さん協力してくれるわけ…」
+#愛莉
+「ものは試し！ダメならダメで諦める！」
+「いい！？」
+#主人公
+「ありがとうございます…。」
+#愛莉
+「そうと決めたら、プールまで急ごう！」
+
+#
+ズドドドドドドドド
+
+#愛莉
+「…地震！？」
+#主人公
+「もしかして…！これが滅びの前兆…！？」
+#愛莉
+「なんか言った！？」
+#主人公
+「い、いえ、何も！」
+「愛莉さん！とにかくプールまで急ぎましょう。」
+
+;[scene file="stage3"]
