@@ -1,0 +1,112 @@
+;愛莉ルートです
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+;背景の新規定義
+[bg_new storage="rouka"]
+
+;背景の表示
+[bg_show ]
+
+;キャラクターの宣言
+[chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+
+[chara_face name="airi" face="puzzling" storage=airi2 ]
+[chara_face name="airi" face="smile" storage=airi3 ]
+
+#主人公
+パンツを奪うことを特別に許可すると言われても、[l][r]私の良心がとても許さない…。[p]
+なにか理由をつけないことには、[l][r]とても回収できないわ…。[p]
+そうだ、[l]プール！[p]
+プールならば余分にパンツを持ってきている人が[r]絶対にいる。[p]
+我ながらナイスアイディアだ！[p]
+どうにかして回収させてもらいましょう。[p]
+
+;背景の新規定義
+[bg_new storage="pool" ]
+
+;背景の表示
+[bg_show ]
+[wait time=1]
+
+〜〜〜プールの更衣室で待つこと10分〜〜〜[p]
+
+;キャラクターを表示
+[chara_show name="airi" ]
+[playbgm wait=false storage="pants_mion(loopver)"]
+
+#???
+おーい、お姉さん。[p]
+さっきから全く動かないけど、[l][r]もしかしてパンツ忘れちゃった？[p]
+
+#主人公
+女神様！！！[p]
+
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.8" y=-3 ]
+[chara_mod name="airi" face="puzzling"]
+[wait time=0.5 ]
+#???
+ほへ？[p]
+
+#主人公
+わーっ！[p]
+すみません、[l]心の声が…[p]
+
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.5" y=-1 ]
+[chara_mod name="airi" face="default"]
+[wait time=0.5 ]
+#???
+やっぱり忘れてきちゃったわけね。[p]
+最近大人っぽいパンツがなぜかどこも品切れでさ。[p]
+ちょっと子供っぽいんだけど…[l][r]
+ま、[l]出来たてほやほや新品だから許して。[p]
+はいどうぞ！[p]
+
+#主人公
+助かりました。[l]ありがとうございます。[p]
+
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.3" y=-1 ]
+[chara_mod name="airi" face="smile"]
+[wait time=0.5 ]
+#???
+いいってことよ！[p]
+人間、持ちつ持たれつ、[l]だからね！[p]
+
+#主人公
+今度会ったらお礼をさせてください。[p]
+
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.5" y=-1 ]
+[chara_mod name="airi" face="default"]
+[wait time=0.5 ]
+#???
+いいのいいの、[l]気にしないで。[p]
+
+#主人公
+そういうわけには…[p]
+
+#???
+んーじゃあそうね。[p]
+わたしよくここのプール来るし…[p]
+
+[chara_hide name="airi" time=0.5 ]
+[chara_pos name="airi" scale="0.3" y=-1 ]
+[chara_mod name="airi" face="smile"]
+[wait time=0.5 ]
+次会ったら、イチゴ・オレでもちょうだいな！[p]
+では、アディオスッ！[p]
+
+;[scene file="stage2"]
