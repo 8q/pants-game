@@ -19,94 +19,38 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
-
-[chara_face name="airi" face="puzzling" storage=airi2 ]
-[chara_face name="airi" face="smile" storage=airi3 ]
-
-#主人公
-パンツを奪うことを特別に許可すると言われても、[l][r]私の良心がとても許さない…。[p]
-なにか理由をつけないことには、[l][r]とても回収できないわ…。[p]
-そうだ、[l]プール！[p]
-プールならば余分にパンツを持ってきている人が[r]絶対にいる。[p]
-我ながらナイスアイディアだ！[p]
-どうにかして回収させてもらいましょう。[p]
-
-;背景の新規定義
-[bg_new storage="pool" ]
-
-;背景の表示
-[bg_show ]
-[wait time=1]
-
-〜〜〜プールの更衣室で待つこと10分〜〜〜[p]
-
-;キャラクターを表示
-[chara_show name="airi" ]
-[playbgm wait=false storage="pants_mion(loopver)"]
-
-#???
-おーい、お姉さん。[p]
-さっきから全く動かないけど、[l][r]もしかしてパンツ忘れちゃった？[p]
+[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+[chara_face name="mion" face="puzzling" storage=mion2 ]
+[chara_face name="mion" face="smile" storage=mion3 ]
 
 #主人公
-女神様！！！[p]
+———レースのたくさんついたパンツをはいていそうな少女が銭湯の前にいる。[p]
+少しでもパンツを集めたい…[l][r]
+声をかけてみよう。[p]
 
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.8" y=-3 ]
-[chara_mod name="airi" face="puzzling"]
-[wait time=0.5 ]
-#???
-ほへ？[p]
+こんにちは。[l][r]ここの銭湯にはよく来るんですか？[p]
 
+#？？？
+急になんですか？[l][r]きもいから声かけないでほしいんですけど。[p]
 #主人公
-わーっ！[p]
-すみません、[l]心の声が…[p]
-
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.5" y=-1 ]
-[chara_mod name="airi" face="default"]
-[wait time=0.5 ]
-#???
-やっぱり忘れてきちゃったわけね。[p]
-最近大人っぽいパンツがなぜかどこも品切れでさ。[p]
-ちょっと子供っぽいんだけど…[l][r]
-ま、[l]出来たてほやほや新品だから許して。[p]
-はいどうぞ！[p]
-
+ごめんなさい、[l][r]今時のかわいい女の子でも銭湯に来るんだとびっくりしてしまって。[p]
+#？？？
+べ、別にかわいくないし。[l][r]家のお風呂が故障したせいで来ただけだから。[p]
 #主人公
-助かりました。[l]ありがとうございます。[p]
-
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.3" y=-1 ]
-[chara_mod name="airi" face="smile"]
-[wait time=0.5 ]
-#???
-いいってことよ！[p]
-人間、持ちつ持たれつ、[l]だからね！[p]
-
+あの、洗顔料を忘れてしまったので貸して頂けませんか？[p]
+#？？？
+は？銭湯に来るのに忘れたの？[l][r]今回だけだからね、間抜けなお姉さん。[p]
 #主人公
-今度会ったらお礼をさせてください。[p]
-
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.5" y=-1 ]
-[chara_mod name="airi" face="default"]
-[wait time=0.5 ]
-#???
-いいのいいの、[l]気にしないで。[p]
-
+その、洗顔料を見せてくれませんか？[l][r]わたし敏感肌だから合わないかも…[p]
+#？？？
+ちょっ、注文が多いわね、[l][r]バッグ渡すからそれくらい自分で探してよね！[p]
 #主人公
-そういうわけには…[p]
-
-#???
-んーじゃあそうね。[p]
-わたしよくここのプール来るし…[p]
-
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.3" y=-1 ]
-[chara_mod name="airi" face="smile"]
-[wait time=0.5 ]
-次会ったら、イチゴ・オレでもちょうだいな！[p]
-では、アディオスッ！[p]
+彼女が気を抜いているこの隙にパンツを———[p]
+#？？？
+えっ、ちょっ、それパンツ！？[l][r]なんで逃げるの！！！ちょっと！！！[p]
+お気に入りのパンツなのにそれ！！！[p]
+最近全然レースつきのパンツ売ってないし！！！[p]
+しかもお風呂入れないじゃない！！！[l][r]なんなのよっ！！！[p]
+絶対に捕まえて、訴えてやるんだからっ！！！[p]
 
 ;[scene file="stage2"]

@@ -19,10 +19,10 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
 
-[chara_face name="airi" face="puzzling" storage=airi2 ]
-[chara_face name="airi" face="smile" storage=airi3 ]
+[chara_face name="mion" face="puzzling" storage=mion2 ]
+[chara_face name="mion" face="smile" storage=mion3 ]
 
 #主人公
 パンツを奪うことを特別に許可すると言われても、[l][r]私の良心がとても許さない…。[p]
@@ -42,7 +42,7 @@
 〜〜〜プールの更衣室で待つこと10分〜〜〜[p]
 
 ;キャラクターを表示
-[chara_show name="airi" ]
+[chara_show name="mion" ]
 [playbgm wait=false storage="pants_mion(loopver)"]
 
 #???
@@ -52,9 +52,9 @@
 #主人公
 女神様！！！[p]
 
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.8" y=-3 ]
-[chara_mod name="airi" face="puzzling"]
+[chara_hide name="mion" time=0.5 ]
+[chara_pos name="mion" scale="0.8" y=-3 ]
+[chara_mod name="mion" face="puzzling"]
 [wait time=0.5 ]
 #???
 ほへ？[p]
@@ -63,9 +63,9 @@
 わーっ！[p]
 すみません、[l]心の声が…[p]
 
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.5" y=-1 ]
-[chara_mod name="airi" face="default"]
+[chara_hide name="mion" time=0.5 ]
+[chara_pos name="mion" scale="0.5" y=-1 ]
+[chara_mod name="mion" face="default"]
 [wait time=0.5 ]
 #???
 やっぱり忘れてきちゃったわけね。[p]
@@ -77,9 +77,9 @@
 #主人公
 助かりました。[l]ありがとうございます。[p]
 
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.3" y=-1 ]
-[chara_mod name="airi" face="smile"]
+[chara_hide name="mion" time=0.5 ]
+[chara_pos name="mion" scale="0.3" y=-1 ]
+[chara_mod name="mion" face="smile"]
 [wait time=0.5 ]
 #???
 いいってことよ！[p]
@@ -88,9 +88,9 @@
 #主人公
 今度会ったらお礼をさせてください。[p]
 
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.5" y=-1 ]
-[chara_mod name="airi" face="default"]
+[chara_hide name="mion" time=0.5 ]
+[chara_pos name="mion" scale="0.5" y=-1 ]
+[chara_mod name="mion" face="default"]
 [wait time=0.5 ]
 #???
 いいのいいの、[l]気にしないで。[p]
@@ -102,11 +102,11 @@
 んーじゃあそうね。[p]
 わたしよくここのプール来るし…[p]
 
-[chara_hide name="airi" time=0.5 ]
-[chara_pos name="airi" scale="0.3" y=-1 ]
-[chara_mod name="airi" face="smile"]
+[chara_hide name="mion" time=0.5 ]
+[chara_pos name="mion" scale="0.3" y=-1 ]
+[chara_mod name="mion" face="smile"]
 [wait time=0.5 ]
 次会ったら、イチゴ・オレでもちょうだいな！[p]
 では、アディオスッ！[p]
 
-;[scene file="stage2"]
+;[scene file="stage3"]
