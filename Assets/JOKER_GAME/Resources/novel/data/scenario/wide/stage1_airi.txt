@@ -1,4 +1,4 @@
-;愛莉ルートです
+
 
 ;メッセージ表示
 [showmessage]
@@ -46,67 +46,67 @@
 [playbgm wait=false storage="pants_mion(loopver)"]
 
 #???
-おーい、お姉さん。[p]
-さっきから全く動かないけど、[l][r]もしかしてパンツ忘れちゃった？[p]
+「おーい、お姉さん。」[p]
+「さっきから全く動かないけど、[l][r]もしかしてパンツ忘れちゃった？」[p]
 
 #主人公
-女神様！！！[p]
+「女神様！！！」[p]
 
 [chara_hide name="airi" time=0.5 ]
 [chara_pos name="airi" scale="0.8" y=-3 ]
 [chara_mod name="airi" face="puzzling"]
 [wait time=0.5 ]
 #???
-ほへ？[p]
+「ほへ？」[p]
 
 #主人公
-わーっ！[p]
-すみません、[l]心の声が…[p]
+「わーっ！」[p]
+「すみません、[l]心の声が…」[p]
 
 [chara_hide name="airi" time=0.5 ]
 [chara_pos name="airi" scale="0.5" y=-1 ]
 [chara_mod name="airi" face="default"]
 [wait time=0.5 ]
 #???
-やっぱり忘れてきちゃったわけね。[p]
-最近大人っぽいパンツがなぜかどこも品切れでさ。[p]
-ちょっと子供っぽいんだけど…[l][r]
-ま、[l]出来たてほやほや新品だから許して。[p]
-はいどうぞ！[p]
+「やっぱり忘れてきちゃったわけね。」[p]
+「最近大人っぽいパンツがなぜかどこも品切れでさ。」[p]
+「ちょっと子供っぽいんだけど…[」l][r]
+「ま、[l]出来たてほやほや新品だから許して。」[p]
+「はいどうぞ！」[p]
 
 #主人公
-助かりました。[l]ありがとうございます。[p]
+「助かりました。[l]ありがとうございます。」[p]
 
 [chara_hide name="airi" time=0.5 ]
 [chara_pos name="airi" scale="0.3" y=-1 ]
 [chara_mod name="airi" face="smile"]
 [wait time=0.5 ]
 #???
-いいってことよ！[p]
-人間、持ちつ持たれつ、[l]だからね！[p]
+「いいってことよ！」[p]
+「人間、持ちつ持たれつ、[l]だからね！」[p]
 
 #主人公
-今度会ったらお礼をさせてください。[p]
+「今度会ったらお礼をさせてください。」[p]
 
 [chara_hide name="airi" time=0.5 ]
 [chara_pos name="airi" scale="0.5" y=-1 ]
 [chara_mod name="airi" face="default"]
 [wait time=0.5 ]
 #???
-いいのいいの、[l]気にしないで。[p]
+「いいのいいの、[l]気にしないで。」[p]
 
 #主人公
-そういうわけには…[p]
+「そういうわけには…」[p]
 
 #???
-んーじゃあそうね。[p]
-わたしよくここのプール来るし…[p]
+「んーじゃあそうね。」[p]
+「わたしよくここのプール来るし…」[p]
 
 [chara_hide name="airi" time=0.5 ]
 [chara_pos name="airi" scale="0.3" y=-1 ]
 [chara_mod name="airi" face="smile"]
 [wait time=0.5 ]
-次会ったら、イチゴ・オレでもちょうだいな！[p]
-では、アディオスッ！[p]
+「次会ったら、イチゴ・オレでもちょうだいな！」[p]
+「では、アディオスッ！」[p]
 
 ;[scene file="stage2"]
