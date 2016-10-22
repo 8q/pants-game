@@ -5,7 +5,9 @@ public class BackgroundContorller : MonoBehaviour {
 	
 	private GameObject mcamera;
 	private Vector3 preCameraPosition;
-	public float scrollSize; 
+	public float scrollSize;
+
+	public double scrollBorder = 0.01; //これ以上変化したとき背景をスクロールさせる
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +18,7 @@ public class BackgroundContorller : MonoBehaviour {
 	//背景スクロール
 	// Update is called once per frame
 	void Update () {
-		if (preCameraPosition.x != mcamera.transform.position.x) {
+		if (mcamera.transform.position.x - preCameraPosition.x > scrollBorder) {
 			transform.Translate (-scrollSize, 0, 0);
 		}
 		preCameraPosition = mcamera.transform.position;
