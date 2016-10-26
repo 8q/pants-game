@@ -60,4 +60,4 @@
 
 「では、レースのたくさんついたパンツの回収に[r]励んでくれたまえ。」[p]
 
-[scene file="stage1"]
+[scene file="pants_stage_1"]

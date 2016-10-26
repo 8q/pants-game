@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 using Novel;
 
@@ -92,19 +93,30 @@ public class GameSystemScript : MonoBehaviour
         {
             var maxCount = pantsCounts.Select((val, index) => new { V = val, I = index })
             .Aggregate((max, working) => (max.V > working.V) ? max : working);
+            // 正規表現によってStage番号を取得し分岐
+            Regex reg = new Regex("\d$");
+            Match match = reg.Match(Application.loadedLevelName);
+            if(match.Success)
+            {
+                var currentStageNum = match.Value;
+            }
+            else
+            {
+                Debug.Log("Read Stage Name Error");
+            }
             switch (maxCount.I)
             {
                 case 0: //あいり
                     Debug.Log("Airi");
-                    NovelSingleton.StatusManager.callJoker("wide/stage1_aft", "");
+                    NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_airi", "");
                     break;
                 case 1: //みおん
                     Debug.Log("Mion");
-                    NovelSingleton.StatusManager.callJoker("wide/stage1_aft", "");
+                    NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_mion", "");
                     break;
                 case 2: //うみの
                     Debug.Log("Umino");
-                    NovelSingleton.StatusManager.callJoker("wide/stage1_aft", "");
+                    NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_umino", "");
                     break;
                 default:
                     Debug.Log("Move Next Phase Error");
