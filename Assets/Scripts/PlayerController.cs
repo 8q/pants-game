@@ -102,10 +102,16 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            if (Input.GetButton("Small"))
+            {
+                GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce * 0.8f, ForceMode2D.Impulse);
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
             isJumping = true;
             GetComponent<Animator>().enabled = false;
-
         }
         /*		
             //ジャンプ
