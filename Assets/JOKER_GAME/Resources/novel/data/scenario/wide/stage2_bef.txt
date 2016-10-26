@@ -38,5 +38,5 @@
 今まで以上の回収を頑張ってほしい。[p]
 さあ、行って来い。[p]
 
-;stage2前のシナリオにジャンプ
-@jump file=wide/stage2_bef scene=new
+;stage2にジャンプ
+[scene file="pants_stage_2"]
