@@ -49,4 +49,4 @@
 #海野さん
 「向こうで待っているから、頑張ってたどり着いて。」
 
-;[scene file="stage3"]
+[scene file="pants_stage_3"]

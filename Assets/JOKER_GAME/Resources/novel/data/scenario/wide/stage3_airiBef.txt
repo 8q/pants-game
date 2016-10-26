@@ -67,4 +67,4 @@
 「い、いえ、何も！」
 「愛莉さん！とにかくプールまで急ぎましょう。」
 
-;[scene file="stage3"]
+[scene file="pants_stage_3"]

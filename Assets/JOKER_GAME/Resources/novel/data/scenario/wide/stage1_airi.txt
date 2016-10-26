@@ -109,4 +109,4 @@
 「次会ったら、イチゴ・オレでもちょうだいな！」[p]
 「では、アディオスッ！」[p]
 
-[scene file="pants_stage_2"]
+@jump file=wide/stage2_bef scene=new

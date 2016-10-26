@@ -71,4 +71,4 @@
 #みおん
 「わたしの足を引っ張らないようにね、お姉さん！」
 
-;[scene file="stage3"]
+[scene file="pants_stage_3"]
