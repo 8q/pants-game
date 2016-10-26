@@ -69,7 +69,7 @@ public class GameSystemScript : MonoBehaviour
     {
         if (IsGameOver)
         {
-
+			((PlayerController)(GameObject.FindGameObjectWithTag ("Player").GetComponent ("PlayerController"))).enabled = false;
             //Debug.Log ("GameOver");
 
             CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () =>
