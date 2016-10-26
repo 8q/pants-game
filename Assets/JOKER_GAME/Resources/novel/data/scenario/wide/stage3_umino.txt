@@ -68,4 +68,4 @@
 「………………このパンツを託すよ。クラゲの元に届けてあげて。」
 「………………任せたよ。」
 
-;[scene file="stage4"]
+[scene file="pants_stage_4"]

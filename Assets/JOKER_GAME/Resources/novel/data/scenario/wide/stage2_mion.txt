@@ -86,4 +86,4 @@
 「じゃ、わたしもう行くわ。」
 「せいぜい頑張りなさーい。」
 
-@jump file=wide/stage3_mionBef scene=new
+@jump file=wide/stage3_mionBef
