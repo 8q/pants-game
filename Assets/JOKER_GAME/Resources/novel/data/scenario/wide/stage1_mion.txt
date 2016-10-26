@@ -53,4 +53,4 @@
 しかもお風呂入れないじゃない！！！[l][r]なんなのよっ！！！[p]
 絶対に捕まえて、訴えてやるんだからっ！！！[p]
 
-@jump file=wide/stage2_bef scene=new
+@jump file=wide/stage2_bef
