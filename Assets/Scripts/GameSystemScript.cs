@@ -109,16 +109,19 @@ public class GameSystemScript : MonoBehaviour
             {
                 case 0: //あいり
                     Debug.Log("Airi");
+					Constant.ROUTE = Constant.RouteName.Airi;
                     // NovelSingleton.StatusManager.callJoker("wide/stage1_airi", "");
                     NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_airi", "");
                     break;
                 case 1: //みおん
                     Debug.Log("Mion");
+					Constant.ROUTE = Constant.RouteName.Mion;
                     // NovelSingleton.StatusManager.callJoker("wide/stage1_mion", "");
                     NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_mion", "");
                     break;
                 case 2: //うみの
                     Debug.Log("Umino");
+					Constant.ROUTE = Constant.RouteName.Umino;
                     // NovelSingleton.StatusManager.callJoker("wide/stage1_umino", "");
                     NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_umino", "");
                     break;
