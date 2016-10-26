@@ -21,6 +21,7 @@ public class HasamiBehaviour : MonoBehaviour {
 		if (other.gameObject.tag == "Player" && playerController.IsInvincible == false) {
 			playerController.IsInvincible = true;
 			GetComponent<AudioSource> ().Play ();
+			Destroy (gameObject);
 			gameSystemScript.DecreaseZanki ();
 		}
 	}
