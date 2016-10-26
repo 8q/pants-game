@@ -63,4 +63,4 @@
 #
 気づいた時には、彼女はもう、消えていた。[p]
 
-;[scene file="stage2"]
+[scene file="pants_stage_2"]
