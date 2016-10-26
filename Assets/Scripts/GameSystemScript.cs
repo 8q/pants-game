@@ -94,8 +94,8 @@ public class GameSystemScript : MonoBehaviour
             var maxCount = pantsCounts.Select((val, index) => new { V = val, I = index })
             .Aggregate((max, working) => (max.V > working.V) ? max : working);
             // 正規表現によってStage番号を取得し分岐
-            Regex reg = new Regex("\d$");
-            Match match = reg.Match(Application.loadedLevelName);
+            var reg = new Regex(@"\d$");
+            var match = reg.Match(Application.loadedLevelName);
             if(match.Success)
             {
                 var currentStageNum = match.Value;
