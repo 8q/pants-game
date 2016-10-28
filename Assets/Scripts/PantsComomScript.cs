@@ -5,16 +5,27 @@ public class PantsComomScript : MonoBehaviour {
 
 	public int pantsIndex;
 
+	public Sprite[] sprites;
+
 	private GameSystemScript gameSystemScript;
 
 	// Use this for initialization
 	void Start () {
 		gameSystemScript = (GameSystemScript)(GameObject.Find("GameSystem").GetComponent("GameSystemScript"));
-		GetComponent<SpriteRenderer>().sprite = (Sprite)Resources.Load ("Prefabs/Sprites/mionp");
-//		switch (Constant.ROUTE) {
-//		case Airi:
-//			GetComponent<SpriteRenderer>().sprite = (Sprite)Resources.Load ("Prefabs/Sprites/mionp");
-//		}
+		switch (ConstantValues.ROUTE) {
+		case ConstantValues.RouteName.Airi:
+			GetComponent<SpriteRenderer> ().sprite = sprites [0];
+			break;
+		case ConstantValues.RouteName.Mion:
+			GetComponent<SpriteRenderer> ().sprite = sprites [1];
+			break;
+		case ConstantValues.RouteName.Umino:
+			GetComponent<SpriteRenderer> ().sprite = sprites [2];
+			break;
+		default:
+			GetComponent<SpriteRenderer> ().sprite = null;
+			break;
+		}
 
 	}
 

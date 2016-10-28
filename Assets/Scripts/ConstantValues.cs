@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Constant  {
-	public static RouteName ROUTE = 0;
+public class ConstantValues  {
+	public static RouteName ROUTE = RouteName.Umino;
 
 	public enum RouteName {
+		Airi,
 		Mion,
 		Umino,
-		Airi,
 	}
 }
