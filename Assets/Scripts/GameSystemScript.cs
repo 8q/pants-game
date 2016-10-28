@@ -105,7 +105,7 @@ public class GameSystemScript : MonoBehaviour
             }
 
 			int maxCount = pantsCounts.Max();
-            switch (maxCount.I)
+            switch (maxCount)
             {
                 case 0: //あいり
                     Debug.Log("Airi");
