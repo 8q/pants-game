@@ -104,8 +104,18 @@ public class GameSystemScript : MonoBehaviour
                 Debug.Log("Read Stage Name Error");
             }
 
-			int maxCount = pantsCounts.Max();
-            switch (maxCount)
+			int maxCountIndex = 0;
+			int maxCount = pantsCounts[0];
+			if(maxCount < pantsCounts[1]){
+				maxCountIndex = 1;
+				maxCount = pantsCounts[1];
+			} 
+			if(maxCount < pantsCounts[2]) {
+				maxCountIndex = 2;
+				maxCount = pantsCounts[2];
+			}
+			
+			switch (maxCountIndex)
             {
                 case 0: //あいり
                     Debug.Log("Airi");
