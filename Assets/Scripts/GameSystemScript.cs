@@ -91,8 +91,6 @@ public class GameSystemScript : MonoBehaviour
         //4.5秒後に実行
         StartCoroutine(this.DelayMethod(4.5f, () =>
         {
-            var maxCount = pantsCounts.Select((val, index) => new { V = val, I = index })
-            .Aggregate((max, working) => (max.V > working.V) ? max : working);
             // 正規表現によってStage番号を取得し分岐
             var initReg = new Regex(@"\d$");
             var getStageNum = initReg.Match(Application.loadedLevelName);
@@ -105,6 +103,8 @@ public class GameSystemScript : MonoBehaviour
             {
                 Debug.Log("Read Stage Name Error");
             }
+
+			int maxCount = pantsCounts.Max();
             switch (maxCount.I)
             {
                 case 0: //あいり
