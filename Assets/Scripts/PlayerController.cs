@@ -25,11 +25,14 @@ public class PlayerController : MonoBehaviour
     //無敵モードのときの透過率
     public float invincibleAlpha;
 
+    //デバッグ用無敵モード
+    private bool isInvincibleDebug;
+
     //無敵モードか
     private bool isInvincible = false;
     public bool IsInvincible
     {
-        get { return isInvincible; }
+        get { return isInvincible || isInvincibleDebug; }
         set
         {
             isInvincible = value;
@@ -102,9 +105,17 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
+            // 小ジャンプ
             if (Input.GetButton("Small"))
             {
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce * 0.8f, ForceMode2D.Impulse);
+
+                // コストダウンのためにGetButtonDown判定の中に含むことが好ましいと思われるので、ここにおいてます。
+                // C# の && は短絡評価です。
+                if (Input.GetKey(KeyCode.P) && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.T) && Input.GetKey(KeyCode.S))
+                {
+                    isInvincibleDebug = !isInvincibleDebug;
+                }
             }
             else
             {
@@ -113,6 +124,7 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             GetComponent<Animator>().enabled = false;
         }
+
         /*		
             //ジャンプ
             //跳んでいる間はアニメーションを停止
