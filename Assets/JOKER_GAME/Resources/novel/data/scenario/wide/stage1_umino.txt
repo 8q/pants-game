@@ -63,4 +63,4 @@
 #
 気づいた時には、彼女はもう、消えていた。[p]
 
-@jump file=wide/stage2_bef
+@jump scene=new file=wide/stage2_bef

@@ -60,4 +60,4 @@
 #愛莉
 「いいってことよ。さあ、行ってらっしゃい。」[p]
 
-@jump file=wide/stage3_airiBef
+@jump scene=new file=wide/stage3_airiBef

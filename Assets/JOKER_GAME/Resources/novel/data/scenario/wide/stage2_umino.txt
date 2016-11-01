@@ -64,4 +64,4 @@
 また、彼女は消えていた。
 
 
-@jump file=wide/stage3_uminoBef
+@jump scene=new file=wide/stage3_uminoBef

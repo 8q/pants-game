@@ -19,9 +19,9 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
-[chara_face name="mion" face="puzzling" storage=mion2 ]
-[chara_face name="mion" face="smile" storage=mion3 ]
+;[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+;[chara_face name="mion" face="puzzling" storage=mion2 ]
+;[chara_face name="mion" face="smile" storage=mion3 ]
 
 #主人公
 ———レースのたくさんついたパンツをはいていそうな少女が銭湯の前にいる。[p]
@@ -53,4 +53,4 @@
 しかもお風呂入れないじゃない！！！[l][r]なんなのよっ！！！[p]
 絶対に捕まえて、訴えてやるんだからっ！！！[p]
 
-@jump file=wide/stage2_bef
+@jump scene=new file=wide/stage2_bef
