@@ -23,7 +23,7 @@
 [chara_face name="umino" face="openmouth" storage=umino2 ]
 
 ;キャラクターを表示
-[chara_show name="umino1" ]
+[chara_show name="umino" ]
 [playbgm wait=false storage="pants_mion(loopver)"]
 
 #主人公
