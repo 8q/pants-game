@@ -24,7 +24,6 @@
 
 ;キャラクターを表示
 [chara_show name="umino" ]
-[playbgm wait=false storage="pants_mion(loopver)"]
 
 #主人公
 パンツ回収極秘任務を課せられてからというもの、[p]

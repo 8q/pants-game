@@ -20,13 +20,15 @@
 
 ;キャラクターの宣言
 [chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
-
 [chara_face name="mion" face="puzzling" storage=mion2 ]
 [chara_face name="mion" face="smile" storage=mion3 ]
 
 #主人公
 はあ、はあ、はあ…。[p]
 パンツ奪取はかなり体力的にきつい…。動けない…。[p]
+
+;キャラクターを表示
+[chara_show name="mion" ]
 
 #？？？
 こんにちは、そこでへばってるおばさん。この下着泥棒が。[p]

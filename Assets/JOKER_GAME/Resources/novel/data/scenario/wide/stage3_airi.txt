@@ -22,6 +22,10 @@
 [chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
 [chara_face name="airi" face="puzzling" storage=airi2 ]
 [chara_face name="airi" face="smile" storage=airi3 ]
+[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+
+;キャラクターを表示
+[chara_show name="airi" ]
 
 #愛莉
 「着いたー！」[p]
@@ -82,6 +86,14 @@
 「なぜプールに放り込めと言われているのか分かりませんが…ものは試し！」[p]
 #愛莉
 「ううっ、秘蔵パンツをプールに放り込むことになるとは…。」[p]
+
+;背景の新規定義
+[bg_new storage="poolnight" ]
+
+;背景の表示
+[bg_show ]
+[wait time=1]
+
 #主人公
 「愛莉さん、１、２の３で放り込みますよ。」[p]
 #愛莉
@@ -98,6 +110,13 @@
 「プールの水がどんどん吸い込まれていく！！？」[p]
 #主人公
 「パンツもどんどん吸い込まれていきます！」[p]
+
+;背景の新規定義
+[bg_new storage="poolnightblank" ]
+
+;背景の表示
+[bg_show ]
+[wait time=1]
 
 #愛莉
 「プールの水もパンツも全部なくなっちゃった…。」[p]
@@ -116,6 +135,13 @@
 「つまり、我々は危機を乗り越えた…！」[p]
 「君、今どこにいる。」[p]
 「分かった。すぐに迎えに行こう。」[p]
+
+;背景の新規定義
+[bg_new storage="poolmorning" ]
+
+;背景の表示
+[bg_show ]
+[wait time=1]
 
 #主人公
 「地震は収まったようです。」[p]

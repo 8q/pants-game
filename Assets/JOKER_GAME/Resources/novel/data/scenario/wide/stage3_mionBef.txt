@@ -19,18 +19,22 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
 [chara_face name="mion" face="puzzling" storage=mion2 ]
 [chara_face name="mion" face="smile" storage=mion3 ]
 
 
-あと１日で国が滅びる日。
-まだ目標の回収量には届いていないが、休息を取らないことには…。
+あと１日で国が滅びる日。[p]
+まだ目標の回収量には届いていないが、[l][r]休息を取らないことには…。[p]
 
 ピンポーン
 
 #主人公
 「こんな時間に誰？」[p]
+
+;キャラクターを表示
+[chara_show name="mion" ]
+
 #みおん
 「こーんばーんは。教えられた住所、正しかったみたいね。」[p]
 #主人公

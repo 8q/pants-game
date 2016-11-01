@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="room"]
+[bg_new storage="castle"]
 
 ;背景の表示
 [bg_show ]
@@ -22,14 +22,14 @@
 [playbgm wait=false storage="music"]
 
 ;キャラクターの宣言
-[chara_new name=sha storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
 
 ;キャラクターを表示
-[show name=sha]
+[show name=boss]
 
 [wait time=2]
 
-#sha
+#boss
 「世界はレース不足に陥っている。」[p]
 「そこで君たちにレースを収集する任務を課す。」[p]
 「君の配属先はーーー」[l][r]

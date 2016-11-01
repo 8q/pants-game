@@ -12,21 +12,17 @@
 [text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
 [text_show name="_sp_chara_name"]
 
-;背景の新規定義
-;[bg_new storage=""]
-
-;背景の表示
-;[bg_show ]
+;背景は黒
 
 ;キャラクターの宣言
-[chara_new name=sha storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
 
 ;キャラクターを表示
-[show name=sha]
+[show name=boss]
 
 [wait time=2]
 
-#sha
+#boss
 聞いてくれ、諸君。[p]
 理由は言えないが、この１週間で目標のレース回収量に到達しなければ…[p]
 
