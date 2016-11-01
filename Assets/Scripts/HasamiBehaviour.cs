@@ -20,8 +20,9 @@ public class HasamiBehaviour : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player" && playerController.IsInvincible == false) {
 			playerController.IsInvincible = true;
-			((AudioSource)Instantiate (GetComponent<AudioSource> ())).Play ();
-			Destroy (gameObject);
+			GetComponent<AudioSource> ().Play ();
+			Destroy (GetComponent<CircleCollider2D> ());
+			GetComponent<SpriteRenderer> ().enabled = false;
 			gameSystemScript.DecreaseZanki ();
 		}
 	}

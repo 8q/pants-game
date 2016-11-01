@@ -11,9 +11,11 @@ public class GameSystemScript : MonoBehaviour
 
     public bool IsGameOver { get; set; }
 
+	public int stageNumber; //ステージ番号
+
     public int[] pantsCounts;
 
-    public Canvas uiCanvas;
+	public int borderOfPantsCount; //最大の個数がこれ以下のときゲームオーバーとなる
 
     public Text[] texts;
 
@@ -21,8 +23,7 @@ public class GameSystemScript : MonoBehaviour
 
     public int zanki; //現在の残機
 
-    public string sceneName; //このシーンの名前
-
+	public bool isRouteDiverged; //このステージはルート分岐後のものか
 
     // Use this for initialization
     void Start()
@@ -54,8 +55,7 @@ public class GameSystemScript : MonoBehaviour
         //		if (zanki == 0)
         //			return;
 
-        zanki--;
-        int index = zanki;
+        int index = --zanki;
         Destroy(zankiImages[index]);
         if (zanki == 0)
         {
@@ -68,20 +68,37 @@ public class GameSystemScript : MonoBehaviour
     //パンツの数で分岐 //GameOverFlagが立っている場合ゲームオーバー
     public void MoveNextPhase()
     {
+		//プレーヤーをコントロールできなくする
+		((PlayerController)(GameObject.FindGameObjectWithTag ("Player").GetComponent ("PlayerController"))).enabled = false;
+
+		//パンツの最大個数とそのインデックス
+		int maxCountIndex = -1;
+		int maxCount = -1;
+		for (int i = 0; i < pantsCounts.Length; i++) {
+			if(maxCount < pantsCounts[i]){
+				maxCountIndex = i;
+				maxCount = pantsCounts[i];
+			} 
+		}
+
+		//獲得数の最大個数が設定以下だったときゲームオーバー
+		if (maxCount < borderOfPantsCount) 
+		{
+			IsGameOver = true;
+		}
+
         if (IsGameOver)
         {
-			((PlayerController)(GameObject.FindGameObjectWithTag ("Player").GetComponent ("PlayerController"))).enabled = false;
             //Debug.Log ("GameOver");
 
             CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () =>
             {
-                GameOverScript.CurrentSceneName = sceneName;
+				GameOverScript.CurrentSceneName = SceneManager.GetActiveScene ().name;
                 SceneManager.LoadScene("gameover");
             });
             return;
         }
-
-
+			
         // GOALシーンをかぶせる
         CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () =>
         {
@@ -91,48 +108,48 @@ public class GameSystemScript : MonoBehaviour
         //4.5秒後に実行
         StartCoroutine(this.DelayMethod(4.5f, () =>
         {
-            var maxCount = pantsCounts.Select((val, index) => new { V = val, I = index })
-            .Aggregate((max, working) => (max.V > working.V) ? max : working);
-            // 正規表現によってStage番号を取得し分岐
-            var initReg = new Regex(@"\d$");
-            var getStageNum = initReg.Match(Application.loadedLevelName);
-            string currentStageNum = null;
-            if(getStageNum.Success)
-            {
-                currentStageNum = getStageNum.Value;
-            }
-            else
-            {
-                Debug.Log("Read Stage Name Error");
-            }
-            switch (maxCount.I)
-            {
-                case 0: //あいり
-                    Debug.Log("Airi");
-                    // NovelSingleton.StatusManager.callJoker("wide/stage1_airi", "");
-                    NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_airi", "");
-                    break;
-                case 1: //みおん
-                    Debug.Log("Mion");
-                    // NovelSingleton.StatusManager.callJoker("wide/stage1_mion", "");
-                    NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_mion", "");
-                    break;
-                case 2: //うみの
-                    Debug.Log("Umino");
-                    // NovelSingleton.StatusManager.callJoker("wide/stage1_umino", "");
-                    NovelSingleton.StatusManager.callJoker("wide/stage" + currentStageNum + "_umino", "");
-                    break;
-                default:
-                    Debug.Log("Move Next Phase Error");
-                    break;
-            }
+				//ルート分岐前
+				if(isRouteDiverged == false)
+				{
+					switch (maxCountIndex)
+		            {
+		                case 0: //あいり
+							ConstantValues.ROUTE = ConstantValues.RouteName.Airi;
+		                    break;
+		                case 1: //みおん
+							ConstantValues.ROUTE = ConstantValues.RouteName.Mion;						
+		                    break;
+		                case 2: //うみの
+							ConstantValues.ROUTE = ConstantValues.RouteName.Umino;
+		                    break;
+		                default:
+		                    Debug.Log("Move Next Phase Error");
+		                    break;
+		            }
+				}
+				
+				switch(ConstantValues.ROUTE)
+				{
+					case ConstantValues.RouteName.Airi:
+						NovelSingleton.StatusManager.callJoker("wide/stage" + stageNumber + "_airi", "");
+						break;
+					case ConstantValues.RouteName.Mion:
+						NovelSingleton.StatusManager.callJoker("wide/stage" + stageNumber + "_mion", "");
+						break;
+					case ConstantValues.RouteName.Umino:
+						NovelSingleton.StatusManager.callJoker("wide/stage" + stageNumber + "_umino", "");
+						break;
+					default:
+						Debug.Log("Move Next Phase Error");
+						break;
+				}
 
-            // 次の画面をロードしてからGOALシーンを削除
-            CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () =>
-            {
-                SceneManager.UnloadScene("goal");
-            });
-
+	            // 次の画面をロードしてからGOALシーンを削除
+	            CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () =>
+	            {
+	                SceneManager.UnloadScene("goal");
+	            });
+				
         }));
 
     }
