@@ -19,10 +19,12 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
+[chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
+[chara_face name="umino" face="openmouth" storage=umino2 ]
 
-[chara_face name="umino" face="puzzling" storage=umino2 ]
-[chara_face name="umino" face="smile" storage=umino3 ]
+;キャラクターを表示
+[chara_show name="umino1" ]
+[playbgm wait=false storage="pants_mion(loopver)"]
 
 #主人公
 パンツ回収極秘任務を課せられてからというもの、[p]
