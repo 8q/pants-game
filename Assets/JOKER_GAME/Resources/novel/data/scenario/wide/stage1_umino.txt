@@ -22,9 +22,6 @@
 [chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
 [chara_face name="umino" face="openmouth" storage=umino2 ]
 
-;キャラクターを表示
-[chara_show name="umino" ]
-
 #主人公
 パンツ回収極秘任務を課せられてからというもの、[p]
 来る日も来る日もパンツを回収しているが、一向に任務終了の気配がない。[p]
@@ -36,6 +33,9 @@
 
 わたし、なにしてるんだろうな。[p]
 こんな仕事辛い、逃げてしまいたい。[p]
+
+;キャラクターを表示
+[chara_show name="umino" ]
 
 ドンッ[p]
 

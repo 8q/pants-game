@@ -25,7 +25,7 @@ public class SceneInit : MonoBehaviour {
 		NovelSingleton.clearSingleton ();
 		StatusManager.initScene ();
 
-		Debug.Log("GameStart"); 
+		Debug.Log("GameStart");
 
 		//ドキュメント作製用
 		//DocGenerator.start ();
@@ -138,7 +138,7 @@ public class SceneInit : MonoBehaviour {
 
 
 	public void wait(float time){
-	
+
 		//処理を止める
 		StartCoroutine("startWait",time);
 
@@ -148,7 +148,7 @@ public class SceneInit : MonoBehaviour {
 	public void coroutineShowMessage(string message){
 		StatusManager.isMessageShowing = true;
 		StartCoroutine("showMessage",message);
-	
+
 	}
 
 	//一定時間処理を停止するためのコルーチン
@@ -223,7 +223,7 @@ public class SceneInit : MonoBehaviour {
 		if (StatusManager.FlagSkiiping == true) {
 
 			this.gameManager.scene.MessageSpeed = 0.001f;
-			
+
 		}
 
 		for (int i = 0; i < message.Length; i++) {
@@ -253,7 +253,7 @@ public class SceneInit : MonoBehaviour {
 		this.gameManager.nextOrder ();
 
 		yield return null;
- 
+
 
 	}
 
@@ -301,7 +301,7 @@ public class SceneInit : MonoBehaviour {
 
 
 		//this.gameManager.check ();
-		if (Input.GetMouseButtonUp (0)) {
+		if (Input.GetMouseButtonUp (0) || Input.GetKeyDown ("return") || Input.GetKeyDown ("enter")) {
 
 			StartCoroutine("ClickButton");
 
@@ -447,7 +447,7 @@ public class SceneInit : MonoBehaviour {
 	//アプリ終了前
 	void OnApplicationQuit(){
 
-		//gameManager.saveManager.saveFromSnap("autosave"); 
+		//gameManager.saveManager.saveFromSnap("autosave");
 
 	}
 
