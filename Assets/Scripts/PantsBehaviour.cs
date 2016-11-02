@@ -20,6 +20,7 @@ public class PantsBehaviour : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 			Destroy(gameObject);
+			//SEPlayer.Play(SEPlayer.SE.Pants);
 			gameSystemScript.AddPantsCount (pantsIndex);
 		}
 	}

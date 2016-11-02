@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.P) && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.T) && Input.GetKey(KeyCode.S))
             {
                 isInvincibleDebug = !isInvincibleDebug;
+				Debug.Log ("isInvincibleDebug=" + isInvincibleDebug);
             }
 
             isJumping = true;

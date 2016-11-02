@@ -20,7 +20,7 @@ public class TaifuBehavior : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player" && playerController.IsInvincible == false) {
 			playerController.IsInvincible = true;
-			GetComponent<AudioSource> ().Play ();
+			SEPlayer.Play(SEPlayer.SE.Taifu);
 			gameSystemScript.DecreaseZanki ();
 		}
 	}
