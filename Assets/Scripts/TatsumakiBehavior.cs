@@ -40,6 +40,7 @@ public class TatsumakiBehavior : MonoBehaviour {
 		if (other.gameObject.tag == "Player" && playerController.IsInvincible == false) {
 			playerController.IsInvincible = true;
 			gameSystemScript.DecreaseZanki ();
+			GetComponent<AudioSource> ().Play ();
 		}
 	}
 }

@@ -19,6 +19,7 @@ public class OtoshianaBehavior : MonoBehaviour {
 		if (other.gameObject.tag == "Player") {
 			gameSystemScript.IsGameOver = true;
 			gameSystemScript.MoveNextPhase ();
+			SEPlayer.Play (SEPlayer.SE.Otoshiana);
 		}
 	}
 }
