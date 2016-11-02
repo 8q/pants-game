@@ -23,9 +23,7 @@ public class DoorBehaviour : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 			GetComponent<SpriteRenderer> ().sprite = openSprite;
-			StartCoroutine(this.DelayMethod(1.5f, () => {
-				gameSystemScript.MoveNextPhase();
-			}));
+			gameSystemScript.MoveNextPhase();
 		}
 	}
 }
