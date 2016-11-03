@@ -72,7 +72,7 @@ public class CreditScript : MonoBehaviour
             BackgroundImage.sprite = s;
             for (int i = 0; i < fadeCount; i++)
             {
-                MaskImage.color = new Color(0, 0, 0, 1 - (i * 0.3f / fadeCount));
+                MaskImage.color = new Color(0, 0, 0, 1 - (i * 0.25f / fadeCount));
                 yield return new WaitForSeconds(0.01f);
             }
 
@@ -80,7 +80,7 @@ public class CreditScript : MonoBehaviour
 
             for (int i = 0; i < fadeCount; i++)
             {
-                MaskImage.color = new Color(0, 0, 0, 0.7f + (i * 0.3f / fadeCount));
+                MaskImage.color = new Color(0, 0, 0, 0.75f + (i * 0.25f / fadeCount));
                 yield return new WaitForSeconds(0.01f);
             }
             MaskImage.color = new Color(0, 0, 0, 1);
