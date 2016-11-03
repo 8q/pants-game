@@ -82,10 +82,15 @@ public class GameSystemScript : MonoBehaviour
 		}
 
 		//獲得数の最大個数が設定以下だったときゲームオーバー
-		if (maxCount < borderOfPantsCount) 
+		if (!IsGameOver && maxCount < borderOfPantsCount) 
 		{
-			IsGameOver = true;
-		}
+            CameraFade.StartAlphaFade(Color.black, false, 0.5f, 0.5f, () =>
+            {
+                GameOverScript.CurrentSceneName = SceneManager.GetActiveScene().name;
+                SceneManager.LoadScene("gameover_pantsless");
+            });
+            return;
+        }
 
         if (IsGameOver)
         {
