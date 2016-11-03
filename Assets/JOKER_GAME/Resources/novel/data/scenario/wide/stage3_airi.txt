@@ -160,4 +160,8 @@
 「もしまた会うことがあったら…その時はいっぱい話そうね。」[p]
 「ばいばい！」
 
-;[scene file="theend"]
+
+@jump scene=new file=wide/stage2_bef
+
+;クレジットにジャンプ
+[scene file="credit_title"]

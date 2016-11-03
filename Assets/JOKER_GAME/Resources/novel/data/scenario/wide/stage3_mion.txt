@@ -76,4 +76,5 @@
 一生懸命に走るあなたの姿、ま、まあまあかっこよかったわよ。」[p]
 「じゃあね。」[p]
 
-;[scene file="theend"]
+;クレジットにジャンプ
+[scene file="credit_title"]

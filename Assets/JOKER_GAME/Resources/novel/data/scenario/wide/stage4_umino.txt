@@ -47,5 +47,5 @@
 「ゆっくりおやすみ。」[p]
 「………………またね。」[p]
 
-
-;[scene file="theend"]
+;クレジットにジャンプ
+[scene file="credit_title"]
