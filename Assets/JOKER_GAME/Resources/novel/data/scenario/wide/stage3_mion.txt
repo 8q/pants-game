@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="castle"]
+[bg_new storage="eraiheya"]
 
 ;背景の表示
 [bg_show ]
@@ -22,7 +22,9 @@
 [chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
 [chara_face name="mion" face="puzzling" storage=mion2 ]
 [chara_face name="mion" face="smile" storage=mion3 ]
-[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_face name="boss" face="thumbsup" storage=sireikan2 ]
+[chara_face name="boss" face="puzzling" storage=sireikan3 ]
 
 ;キャラクターを表示
 [show name=mion]

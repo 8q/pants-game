@@ -19,9 +19,9 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
-[chara_face name="mion" face="puzzling" storage=mion2 ]
-[chara_face name="mion" face="smile" storage=mion3 ]
+[chara_new name="mion" storage=mion1 scale="1" y=-1 jname="みおん" jcolor="#249390"]
+[chara_face name="mion" face="angry" storage=mion2 ]
+[chara_face name="mion" face="natural" storage=mion3 ]
 
 #主人公
 はあ、はあ、はあ…。[p]
@@ -35,6 +35,7 @@
 #主人公
 「！？」[p]
 「手を離しなさい！！」[p]
+[chara_mod name="mion" face="angry"]
 #？？？
 「離すものですか。この前はよくもこのみおんを騙してくれたわね。」[p]
 #主人公
@@ -44,6 +45,7 @@
 「えーっと、おねえ…じゃなくておばさんはどこの誰なのかしらっとね。」[p]
 #主人公
 「やめて、身分証は見ないで。」[p]
+[chara_mod name="mion" face="default"]
 #みおん
 「悪い事する人ってそういうこと言うものよね〜。」[p]
 「は？あんたこの国の…パンツ…？きゃっ」[p]
@@ -57,6 +59,7 @@
 「部長です」[p]
 #みおん
 「なるほど。」[p]
+[chara_mod name="mion" face="angry"]
 「…じゃない！あんたが下着泥棒したことに変わりないわ。」[p]
 「一緒に警察行くわよ。」[p]
 #主人公
@@ -75,15 +78,18 @@
 「どうせノルマに追われているんでしょ。大人って大変そうよね。」[p]
 #主人公
 「…………………………。」[p]
+[chara_mod name="mion" face="natural"]
 #みおん
 「特別に、ほんっと特別にだけど資料を提供するわ。」[p]
 #主人公
 「えっ…？」[p]
+[chara_mod name="mion" face="angry"]
 #みおん
 「別にあんたのためとかじゃないから。」[p]
 「この国で売れてるパンツがだっさーいなんて結果になったら嫌なだけだから。」[p]
 #主人公
 「…ありがとう。」[p]
+[chara_mod name="mion" face="natural"]
 #みおん
 「じゃ、わたしもう行くわ。」[p]
 「せいぜい頑張りなさーい。」[p]

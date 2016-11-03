@@ -13,10 +13,10 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-;[bg_new storage="uketuke"]
+[bg_new storage="uketuke"]
 
 ;背景の表示
-;[bg_show ]
+[bg_show ]
 
 ;キャラクターの宣言
 [chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
@@ -120,7 +120,7 @@
 
 #愛莉
 「プールの水もパンツも全部なくなっちゃった…。」[p]
-主人公
+#主人公
 「…それにしても、さっきから全く揺れませんね。」[p]
 #愛莉
 「確かに。」[p]
@@ -159,9 +159,6 @@
 「また泣いてる！もう、泣き虫なんだからー！」[p]
 「もしまた会うことがあったら…その時はいっぱい話そうね。」[p]
 「ばいばい！」
-
-
-@jump scene=new file=wide/stage2_bef
 
 ;クレジットにジャンプ
 [scene file="credit_title"]

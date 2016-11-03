@@ -22,23 +22,27 @@
 [playbgm wait=false storage="music"]
 
 ;キャラクターの宣言
-[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_face name="boss" face="thumbsup" storage=sireikan2 ]
+[chara_face name="boss" face="puzzling" storage=sireikan3 ]
 
 ;キャラクターを表示
-[show name=boss]
-
-[wait time=2]
+[show name=boss ]
 
 #boss
 「世界はレース不足に陥っている。」[p]
+[chara_mod name="boss" face="thumbsup"]
+
 「そこで君たちにレースを収集する任務を課す。」[p]
+[chara_mod name="boss" face="default"]
+
 「君の配属先はーーー」[l][r]
 「パンツ回収精鋭部隊、だ。」[p]
 「なおこの任務は極秘ミッションであるから、」[p]
 「くれぐれも一般市民にレースを回収していることを[r]悟られないように。」[p]
 「それと」[p]
 *001_return
-「これは時間を急ぐ任務であるから、[l][r]パンツを盗むことを国家権限で許可する。」[p]
+「これは時間を急ぐ任務であるから、[r]パンツを盗むことを国家権限で許可する。」[p]
 「このゲームの世界でだけだぞ。」[p]
 「本当に特別に、だ。」[p]
 「そこのところはよく心に留めてくれ。」[p]
@@ -51,8 +55,13 @@
 [s]
 
 *001_no
+[chara_mod name="boss" face="puzzling"]
+
 「ええと…[l]ちゃんと聞いていたかな？」[p]
 「もう一度だけ言うからよく聞け。」[p]
+
+[chara_mod name="boss" face="default"]
+
 @jump target=*001_return
 
 *001_yes

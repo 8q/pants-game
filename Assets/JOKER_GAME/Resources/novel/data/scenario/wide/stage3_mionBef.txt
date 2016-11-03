@@ -19,22 +19,21 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
-[chara_face name="mion" face="puzzling" storage=mion2 ]
-[chara_face name="mion" face="smile" storage=mion3 ]
+[chara_new name="mion" storage=mion3 scale="1" y=-1 jname="みおん" jcolor="#249390"]
+[chara_face name="mion" face="angry" storage=mion2 ]
+[chara_face name="mion" face="natural" storage=mion1 ]
 
 
 あと１日で国が滅びる日。[p]
 まだ目標の回収量には届いていないが、[l][r]休息を取らないことには…。[p]
 
-ピンポーン
+ピンポーン[p]
 
 #主人公
 「こんな時間に誰？」[p]
 
 ;キャラクターを表示
 [chara_show name="mion" ]
-
 #みおん
 「こーんばーんは。教えられた住所、正しかったみたいね。」[p]
 #主人公
@@ -48,9 +47,11 @@
 「今晩は！なんと！とっておきのパンツを持ってきたわよ！」[p]
 #主人公
 「とてもあなた一人のものとは思えない量なんだけど。」[p]
+[chara_mod name="mion" face="angry"]
 #みおん
 「こ、これでなんとかなるでしょっ！」[p]
 「っていうか、なんとかしなさいよっ！」[p]
+[chara_mod name="mion" face="default"]
 「それだけ。遅いし、もう帰るわ。」[p]
 #主人公
 「…あなた、なぜ下着泥棒に協力的なの？」[p]
@@ -62,6 +63,7 @@
 「だから、よくわからないけど、頑張って。」[p]
 #主人公
 「ありがとう。夜遅いから駅まで送っていくわ。」[p]
+
 #
 ズドドドドドドドド[p]
 
@@ -71,6 +73,7 @@
 「これはもしかして前兆…！？」[p]
 「あなたのくれたパンツを持って、今すぐ本部に向かうわ。」[p]
 「みおんちゃん、危ないけれど一人では置いていけないから一緒に来て。」[p]
+[chara_mod name="mion" face="natural"]
 #みおん
 「わたしの足を引っ張らないようにね、お姉さん！」[p]
 

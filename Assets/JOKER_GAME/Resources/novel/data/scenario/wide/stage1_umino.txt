@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="rouka"]
+[bg_new storage="rojiura"]
 
 ;背景の表示
 [bg_show ]
@@ -21,6 +21,8 @@
 ;キャラクターの宣言
 [chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
 [chara_face name="umino" face="openmouth" storage=umino2 ]
+
+パンツ回収精鋭部隊に配属されてから１週間後[p]
 
 #主人公
 パンツ回収極秘任務を課せられてからというもの、[p]
@@ -59,6 +61,7 @@
 #？？？
 「…………………………………………あなたなら大丈夫。」[p]
 「…………………………………………待っているから。」[p]
+[chara_hide name="umino"]
 #？？？
 「それってどういう———」[p]
 #
