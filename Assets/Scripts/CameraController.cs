@@ -7,15 +7,33 @@ public class CameraController : MonoBehaviour {
 
 	public GameObject door; //ドアより向こう側には移動できないようにするため
 
+	public bool isReverse;
+
+	private Vector3 ScreenTopLeft {
+		get { 
+			if (isReverse == false)
+				return GetComponent<Camera> ().ScreenToWorldPoint (Vector3.zero);
+			else 
+				return GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
+		}
+	}
+
+	private Vector3 ScreenBottomRight {
+		get { 
+			if (isReverse == false)
+				return GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
+			else 
+				return GetComponent<Camera> ().ScreenToWorldPoint (Vector3.zero);
+		}
+	}
+
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
-		Vector3 topLeft = GetScreenTopLeft();
-		Vector3 bottomRight = GetScreenBottomRight();
-		worldWidth = Mathf.Abs(topLeft.x - bottomRight.x);
+		worldWidth = Mathf.Abs(ScreenTopLeft.x - ScreenBottomRight.x);
 	}
 
 	void LateUpdate () {
-		Vector3 topLeft = GetScreenTopLeft();
+		Vector3 topLeft = ScreenTopLeft;
 		//後ろに戻れないようにする
 		if (player.transform.position.x < topLeft.x) {
 			Vector3 newPosition = player.transform.position;
@@ -34,16 +52,5 @@ public class CameraController : MonoBehaviour {
 			newPosition.x = player.transform.position.x;
 			transform.position = newPosition;
 		}
-	}
-
-	//ワールド座標
-	private Vector3 GetScreenTopLeft() {
-		//画面の左上を取得
-		return GetComponent<Camera>().ScreenToWorldPoint(Vector3.zero);
-	}
-
-	private Vector3 GetScreenBottomRight() {
-		//画面の右下を取得
-		return GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0.0f));
 	}
 }
