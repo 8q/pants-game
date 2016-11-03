@@ -8,7 +8,7 @@ public class CreditScript : MonoBehaviour
 {
     private struct CreditItem
     {
-        public CreditItem(string text, float waitSecond = 2f)
+        public CreditItem(string text, float waitSecond = 2.5f)
         {
             Text = text;
             WaitSecond = waitSecond;
@@ -19,9 +19,13 @@ public class CreditScript : MonoBehaviour
 
     public Text CreditText;
 
-    private List<CreditItem> creditList;
+    public Image BackgroundImage;
+    public Image MaskImage;
 
-    private IEnumerator CreditStart(int fadeCount = 30)
+    public List<Sprite> SpriteList;
+
+
+    private IEnumerator CreditStart(List<CreditItem> creditList, int fadeCount = 30)
     {
         CreditText.enabled = true;
 
@@ -54,16 +58,46 @@ public class CreditScript : MonoBehaviour
         yield break;
     }
 
+
+    private IEnumerator BackgroundStart(int fadeCount = 100)
+    {
+
+        float waitSecond = 28f / SpriteList.Count;
+
+        yield return new WaitForSeconds(10);
+
+        BackgroundImage.enabled = true;
+        foreach (var s in SpriteList)
+        {
+            BackgroundImage.sprite = s;
+            for (int i = 0; i < fadeCount; i++)
+            {
+                MaskImage.color = new Color(0, 0, 0, 1 - (i * 0.3f / fadeCount));
+                yield return new WaitForSeconds(0.01f);
+            }
+
+            yield return new WaitForSeconds(waitSecond);
+
+            for (int i = 0; i < fadeCount; i++)
+            {
+                MaskImage.color = new Color(0, 0, 0, 0.7f + (i * 0.3f / fadeCount));
+                yield return new WaitForSeconds(0.01f);
+            }
+            MaskImage.color = new Color(0, 0, 0, 1);
+        }
+        yield break;
+    }
+
+
     // Use this for initialization
     void Start()
     {
-        creditList = new List<CreditItem>
+        var creditList = new List<CreditItem>
         {
             new CreditItem(@"かくして、彼女たちの努力によって
 
 ひとまず世界は救われたのであった――",4),
             new CreditItem("――たぶん。",3),
-
 
             new CreditItem(@"参加スタッフ"),
             new CreditItem(@"《チームPANTS》"),
@@ -121,10 +155,14 @@ new CreditItem(@"心からの感謝を込めて"),
 
 new CreditItem(@"パンツ！"),
 
+new CreditItem(@"",0.5f),
+
 new CreditItem(@"おしまい",4),
         };
 
-        StartCoroutine(CreditStart());
+        StartCoroutine(CreditStart(creditList));
+
+        StartCoroutine(BackgroundStart());
     }
 
 
