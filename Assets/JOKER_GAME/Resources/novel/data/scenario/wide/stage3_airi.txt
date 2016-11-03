@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-;[bg_new storage="uketsuke"]
+;[bg_new storage="uketuke"]
 
 ;背景の表示
 ;[bg_show ]

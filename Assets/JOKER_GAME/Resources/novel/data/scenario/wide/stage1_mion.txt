@@ -19,9 +19,9 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
-[chara_face name="mion" face="puzzling" storage=mion2 ]
-[chara_face name="mion" face="smile" storage=mion3 ]
+[chara_new name="mion" face="hanikami" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
+[chara_face name="mion" face="angry" storage=mion2 ]
+[chara_face name="mion" face="natural" storage=mion3 ]
 
 #主人公
 ———レースのたくさんついたパンツをはいていそうな少女が銭湯の前にいる。[p]
@@ -31,7 +31,8 @@
 こんにちは。[l][r]ここの銭湯にはよく来るんですか？[p]
 
 ;キャラクターを表示
-[chara_show name="mion" ]
+[chara_show name="mion" face="angry"]
+[wait time=0.5 ]
 
 #？？？
 急になんですか？[l][r]きもいから声かけないでほしいんですけど。[p]
