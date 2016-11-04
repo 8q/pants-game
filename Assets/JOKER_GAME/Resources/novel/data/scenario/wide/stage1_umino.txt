@@ -38,6 +38,7 @@
 
 ;キャラクターを表示
 [chara_show name="umino" ]
+[playbgm wait=false storage="pants_umino"]
 
 ドンッ[p]
 

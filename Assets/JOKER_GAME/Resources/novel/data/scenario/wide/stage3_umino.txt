@@ -24,6 +24,7 @@
 
 ;キャラクターを表示
 [chara_show name="umino" ]
+[playbgm wait=false storage="pants_umino"]
 
 #主人公
 「こ、これは…。」[p]
