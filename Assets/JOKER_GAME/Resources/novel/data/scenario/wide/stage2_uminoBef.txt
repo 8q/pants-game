@@ -22,7 +22,7 @@
 [playbgm wait=false storage="eraihito"]
 
 ;キャラクターの宣言
-[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=国のお偉いさん jcolor="#249390"]
 
 ;キャラクターを表示
 [show name=boss]

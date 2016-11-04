@@ -22,7 +22,7 @@
 [chara_new name="airi" storage=airi1 scale="0.5" y=-1 jname="愛莉" jcolor="#249390"]
 [chara_face name="airi" face="puzzling" storage=airi2 ]
 [chara_face name="airi" face="smile" storage=airi3 ]
-[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sha scale="0.8" y=-1 jname=国のお偉いさん jcolor="#249390"]
 
 ;キャラクターを表示
 [chara_show name="airi" ]
@@ -140,7 +140,7 @@
 
 #主人公
 「はい」[p]
-#国の偉い人
+#国のお偉いさん
 「君、聞いてくれ、レース指数値が正常値に戻った！」[p]
 「つまり、我々は危機を乗り越えた…！」[p]
 「君、今どこにいる。」[p]

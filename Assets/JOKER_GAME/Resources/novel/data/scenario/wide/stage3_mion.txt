@@ -22,7 +22,7 @@
 [chara_new name="mion" storage=mion3 scale="1" x=-3 y=-1 jname="みおん" jcolor="#249390"]
 [chara_face name="mion" face="angry" storage=mion2 ]
 [chara_face name="mion" face="hanikami" storage=mion1 ]
-[chara_new name=boss storage=sireikan1 scale="0.4" x=+3 y=-1 jname=国の偉い人 jcolor="#249390"]
+[chara_new name=boss storage=sireikan1 scale="0.4" x=+3 y=-1 jname=国のお偉いさん jcolor="#249390"]
 [chara_face name="boss" face="thumbsup" storage=sireikan2 ]
 [chara_face name="boss" face="puzzling" storage=sireikan3 ]
 

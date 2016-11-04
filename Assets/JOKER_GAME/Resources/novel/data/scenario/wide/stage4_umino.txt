@@ -20,14 +20,14 @@
 
 ;キャラクターの宣言
 [chara_new name="umino" storage=umino3 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
-[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=国のお偉いさん jcolor="#249390"]
 [chara_face name="boss" face="thumbsup" storage=sireikan2 ]
 [chara_face name="boss" face="puzzling" storage=sireikan3 ]
 
 ;キャラクターを表示
 [chara_show name="boss" ]
 
-#国の偉い人
+#国のお偉いさん
 「……揺れが収まった？」[p]
 [chara_mod name="boss" face="thumbsup"]
 「レース指数値がぐんぐん正常値に下がっていくぞ！！！」[p]
