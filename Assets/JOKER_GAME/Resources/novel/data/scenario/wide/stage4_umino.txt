@@ -53,5 +53,7 @@
 「ゆっくりおやすみ。」[p]
 「………………またね。」[p]
 
+[routeselect routename="umino"]
+
 ;クレジットにジャンプ
 [scene file="credit_title"]

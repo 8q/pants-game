@@ -70,4 +70,6 @@
 「しかもお風呂入れないじゃない！！！[l]なんなのよっ！！！」[p]
 「絶対に捕まえて、訴えてやるんだからっ！！！」[p]
 
-@jump scene=new file=wide/stage2_bef
+[routeselect routename="mion"]
+
+@jump scene=new file=wide/stage2_mionBef

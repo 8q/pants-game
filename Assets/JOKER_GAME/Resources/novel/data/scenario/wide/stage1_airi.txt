@@ -109,4 +109,6 @@
 「次会ったら、イチゴ・オレでもちょうだいな！」[p]
 「では、アディオスッ！」[p]
 
-@jump scene=new file=wide/stage2_bef
+[routeselect routename="airi"]
+
+@jump scene=new file=wide/stage2_airiBef

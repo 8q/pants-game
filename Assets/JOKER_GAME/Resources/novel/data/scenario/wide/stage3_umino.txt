@@ -81,4 +81,6 @@
 
 「………………任せたよ。」[p]
 
+[routeselect routename="umino"]
+
 [scene file="pants_stage_4"]

@@ -1,0 +1,45 @@
+
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+
+;背景の新規定義
+[bg_new storage="kuro"]
+
+;背景の表示
+[bg_show ]
+
+;音楽の再生
+[playbgm wait=false storage="eraihito"]
+
+;キャラクターの宣言
+[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+
+;キャラクターを表示
+[show name=boss]
+
+#boss
+聞いてくれ、諸君。[p]
+理由は言えないが、この１週間で目標のレース回収量に到達しなければ…[p]
+
+この国は終わる。[p]
+
+パンツを奪取するのは一時の罪悪感。[p]
+我が国が滅びては、その罪悪感に意味はないのだ。[p]
+
+今まで以上の回収を頑張ってほしい。[p]
+さあ、行って来い。[p]
+
+[routeselect routename="mion"]
+
+;stage2にジャンプ
+[scene file="pants_stage_2"]

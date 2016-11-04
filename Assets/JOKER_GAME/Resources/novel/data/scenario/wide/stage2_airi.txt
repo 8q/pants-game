@@ -74,4 +74,6 @@
 #airi
 「いいってことよ。さあ、行ってらっしゃい。」[p]
 
+[routeselect routename="airi"]
+
 @jump scene=new file=wide/stage3_airiBef

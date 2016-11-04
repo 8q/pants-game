@@ -105,4 +105,6 @@
 「じゃ、わたしもう行くわ。」[p]
 「せいぜい頑張りなさーい。」[p]
 
+[routeselect routename="mion"]
+
 @jump scene=new file=wide/stage3_mionBef

@@ -80,4 +80,6 @@
 #
 気づいた時には、彼女はもう、消えていた。[p]
 
-@jump scene=new file=wide/stage2_bef
+[routeselect routename="umino"]
+
+@jump scene=new file=wide/stage2_uminoBef

@@ -105,5 +105,7 @@
 [chara_mod name="mion" face="default"]
 「じゃあね。」[p]
 
+[routeselect routename="mion"]
+
 ;クレジットにジャンプ
 [scene file="credit_title"]

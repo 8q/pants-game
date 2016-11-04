@@ -79,4 +79,6 @@
 #mion
 「わたしの足を引っ張らないようにね、お姉さん！」[p]
 
+[routeselect routename="mion"]
+
 [scene file="pants_stage_3"]

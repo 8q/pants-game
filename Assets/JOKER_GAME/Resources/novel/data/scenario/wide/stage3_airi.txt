@@ -170,5 +170,7 @@
 「もしまた会うことがあったら…その時はいっぱい話そうね。」[p]
 「ばいばい！」
 
+[routeselect routename="airi"]
+
 ;クレジットにジャンプ
 [scene file="credit_title"]

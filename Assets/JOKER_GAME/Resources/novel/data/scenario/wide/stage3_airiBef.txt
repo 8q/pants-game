@@ -71,4 +71,6 @@
 「ええ。時間がないわ。手を打たなければ後１時間もしないうちに国が滅びる。」[p]
 「愛莉さん！とにかくプールまで急ぎましょう。」[p]
 
+[routeselect routename="airi"]
+
 [scene file="pants_stage_3"]

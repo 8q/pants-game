@@ -77,5 +77,6 @@
 #
 また、彼女は消えていた。[p]
 
+[routeselect routename="umino"]
 
 @jump scene=new file=wide/stage3_uminoBef

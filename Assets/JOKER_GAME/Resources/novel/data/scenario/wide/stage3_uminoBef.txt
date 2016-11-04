@@ -65,4 +65,6 @@
 「向こうで待っているから、頑張ってたどり着いて。」[p]
 「急がないと、取り返しのつかないことになるよ。」[p]
 
+[routeselect routename="umino"]
+
 [scene file="pants_stage_3"]
