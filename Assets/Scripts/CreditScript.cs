@@ -95,7 +95,7 @@ public class CreditScript : MonoBehaviour
         var creditList = new List<CreditItem>
         {
             new CreditItem("",2),
-            new CreditItem(@"かくして、彼女たちの努力によって
+            new CreditItem(@"かくして、彼女たちの活躍によって
 
 ひとまず世界は救われたのであった――",4),
             new CreditItem("――たぶん。",3),
@@ -144,10 +144,14 @@ new CreditItem(@"《協力》"),
 
 new CreditItem(@"《協力》
 
-テストプレイ
+テストプレイ（敬称略）
 
 Poi
-クランク"),
+クランク
+おじょー
+CHO-CHI
+インテグラル長友
+"),
 
 new CreditItem(@"《協力》
 
