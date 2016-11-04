@@ -13,41 +13,50 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="rouka"]
-
+[bg_new storage="kuro"]
 ;背景の表示
 [bg_show ]
 
 ;キャラクターの宣言
 [chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
 [chara_face name="umino" face="openmouth" storage=umino2 ]
+[chara_face name="umino" face="kurage" storage=umino3]
+
+予測では今日で国が滅びる日。[p]
+海野さんに不思議なことを言われてから1週間。[p]
+結局彼女の言葉の意味は分からないまま….[p]
+少しでも集めないと…。[p]
 
 ;キャラクターを表示
 [chara_show name="umino" ]
 
-#海野さん
+#umino
 「…………………………………………。」[p]
 #主人公
 「！？」[p]
-#海野さん
+#umino
 「……………………………こんばんは。」[p]
 #主人公
 「あなたの言う綻びの根源に、たどり着きそうにないのだけれど。」[p]
-#海野さん
+#umino
 「…………………………………………。」[p]
 「………………最後まで足掻く気持ちのあるあなたなら大丈夫、と。」[p]
 #主人公
 「？」[p]
-#海野さん
+
+[chara_mod name="umino" face="kurage"]
+
+#umino
 「………………このクラゲを見ていて。」[p]
 #主人公
 「！？」[p]
-#海野さん
+#umino
 「今から連れて行くのは、この世界と重なっているもう一つの世界。」[p]
 「科学では観測できない、神性な生き物の世界。」[p]
 #主人公
 「ちょっ！？」[p]
-#海野さん
+#umino
 「向こうで待っているから、頑張ってたどり着いて。」[p]
+「急がないと、取り返しのつかないことになるよ。」[p]
 
 [scene file="pants_stage_3"]

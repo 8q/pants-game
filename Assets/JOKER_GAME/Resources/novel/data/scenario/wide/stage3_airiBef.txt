@@ -24,7 +24,7 @@
 [chara_face name="airi" face="puzzling" storage=airi2 ]
 [chara_face name="airi" face="smile" storage=airi3 ]
 
-あと１日で国が滅びる日。[p]
+予測では、今日であと１日で国が滅びる日。[p]
 手は尽くしたけれど、目標のパンツ回収量にはまだ届いていない…。[p]
 
 ;キャラクターを表示
@@ -67,7 +67,7 @@
 #愛莉
 「なんか言った！？」[p]
 #主人公
-「い、いえ、何も！」[p]
+「ええ。時間がないわ。手を打たなければ後１時間もしないうちに国が滅びる。」[p]
 「愛莉さん！とにかくプールまで急ぎましょう。」[p]
 
 [scene file="pants_stage_3"]

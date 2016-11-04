@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="rouka"]
+[bg_new storage="kuro"]
 
 ;背景の表示
 [bg_show ]
@@ -21,9 +21,9 @@
 ;キャラクターの宣言
 [chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
 [chara_face name="umino" face="openmouth" storage=umino2 ]
-[chara_new name=boss storage=sha scale="0.8" y=-1 jname=指揮官 jcolor="#249390"]
-
-;背景は黒
+[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_face name="boss" face="thumbsup" storage=sireikan2 ]
+[chara_face name="boss" face="puzzling" storage=sireikan3 ]
 
 ;キャラクターを表示
 [chara_show name="boss" ]
@@ -34,11 +34,15 @@
 「我々は、危機を乗り越えた…！」[p]
 
 ;背景復活
+;背景の新規定義
+[bg_new storage="littlebright"]
+;背景の表示
+[bg_show ]
 
 ;キャラクターを表示
 [chara_show name="umino" ]
 
-#海野さん
+#umino
 「………………危機は去ったようだね、クラゲ。」[p]
 「…………………………………………。」[p]
 「………………また静かな生活に戻ろうか。」[p]

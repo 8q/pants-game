@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="rouka"]
+[bg_new storage="rojiura"]
 
 ;背景の表示
 [bg_show ]
@@ -49,19 +49,28 @@
 #？？？
 「おーおー、よしよし。愛莉姉さんがいるから大丈夫。」[p]
 [chara_mod name="airi" face="default"]
-#愛莉
+#airi
 「…はっ、妹たちと同じ対応をしてしまった。恥ずかしい…。」[p]
 #主人公
 「…いえ、ありがとうございます。ぐすん。」[p]
-#愛莉
+#airi
 「察するに、あなたパンツを集めているのでしょう？」[p]
 #主人公
 「……はい。」[p]
-#愛莉
+#airi
 「少しだけ協力するわ。困った時はお互い様、ね？」[p]
+
+;パンツ画像定義
+[image_new name="airi2" storage="airi2" layer="front"]
+;パンツ表示
+[image_show name="airi2"]
+[wait time=1]
+;パンツ消去
+[image_hide name="airi2"]
+
 #主人公
 「……ありがとうございます。」[p]
-#愛莉
+#airi
 「いいってことよ。さあ、行ってらっしゃい。」[p]
 
 @jump scene=new file=wide/stage3_airiBef

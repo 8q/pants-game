@@ -19,10 +19,10 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="mion" storage=mion1 scale="0.5" y=-1 jname="みおん" jcolor="#249390"]
-[chara_face name="mion" face="puzzling" storage=mion2 ]
-[chara_face name="mion" face="smile" storage=mion3 ]
-[chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
+[chara_new name="mion" storage=mion3 scale="1" x=-3 y=-1 jname="みおん" jcolor="#249390"]
+[chara_face name="mion" face="angry" storage=mion2 ]
+[chara_face name="mion" face="hanikami" storage=mion1 ]
+[chara_new name=boss storage=sireikan1 scale="0.4" x=+3 y=-1 jname=国の偉い人 jcolor="#249390"]
 [chara_face name="boss" face="thumbsup" storage=sireikan2 ]
 [chara_face name="boss" face="puzzling" storage=sireikan3 ]
 
@@ -32,50 +32,76 @@
 
 #主人公
 「間に合ったか…！？」[p]
-#国の偉い人
+#boss
 「いや、あとほんの少し足りない…！くそっ！」[p]
+
+#
+ゴゴゴゴゴゴゴゴゴゴゴゴゴゴ…[p]
+
 #主人公
 「揺れがひどくなってきている…！」[p]
-#国の偉い人
+#boss
 「パンツ３枚分くらいのレースがあればっ…。」[p]
 #主人公
 「………ッ！」[p]
-#みおん
+#mion
 「これ、家族で海外に行った時に記念で買ったんだけど。」[p]
-#国の偉い人
+#boss
 「こっ、これは…！？」[p]
-#みおん
-「本当に気に入っていたから手放すのは辛いけど…[l][r]
-観賞用で終わるよりは、国の危機を救ったパンツの方がかっこいいものね。」[p]
+
+;パンツ画像定義
+[image_new name="mion3" storage="mion3" layer="front"]
+;パンツ表示
+[image_show name="mion3"]
+[wait time=1]
+;パンツ消去
+[image_hide name="mion3"]
+
+#mion
+「本当に気に入っていたから手放すのは辛いけど…[l]観賞用で終わるよりは、国の危機を救ったパンツの方がかっこいいものね。」[p]
 「あげるわ。」[p]
-#国の偉い人
+#boss
 「早くレースを詰め込んで、輸送するんだ、早くっ！」[p]
 #部下達
 「ハッ！！！！！」[p]
 
-#みおん
+#
+………[p]
+………[p]
+
+#mion
 「……揺れが収まった？」[p]
 #主人公
 「そのようだね」[p]
-#国の偉い人
+[chara_mod name="boss" face="thumbsup"]
+#boss
 「レース指数値がぐんぐん正常値に下がっていくぞ！！！」[p]
 「我々は、危機を乗り越えた…！」[p]
 
+;一旦退場させる
+[chara_hide name="boss"]
+[chara_hide name="mion"]
+;みおんだけ出す
+[chara_pos name="mion" x=0]
+[chara_show name="mion"]
+
 #主人公
 「みおんちゃん、大切なパンツをありがとう。」[p]
-#みおん
+#mion
 「いいよ別に。警察も別にいいや。許す。」[p]
 #主人公
 「…そう。」[p]
-#みおん
+#mion
 「眠くなってきちゃった。」[p]
 #主人公
 「疲れているようだね。」[p]
 「誰かこの子を公用車で家まで送ってあげて。」[p]
 
-#みおん
+[chara_mod name="mion" face="angry"]
+#mion
 「…二度と会うことなさそうだから言うけど、[l][r]
 一生懸命に走るあなたの姿、ま、まあまあかっこよかったわよ。」[p]
+[chara_mod name="mion" face="default"]
 「じゃあね。」[p]
 
 ;クレジットにジャンプ

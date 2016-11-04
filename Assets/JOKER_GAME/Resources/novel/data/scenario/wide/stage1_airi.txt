@@ -19,7 +19,7 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name=airi storage=airi1 scale="0.5" y=-1 jname=愛莉 jcolor="#249390"]
+[chara_new name=airi storage=airi1 scale="0.5" y=-1 jname=？？？ jcolor="#249390"]
 [chara_face name="airi" face="puzzling" storage=airi2 ]
 [chara_face name="airi" face="smile" storage=airi3 ]
 
@@ -47,7 +47,7 @@
 [chara_show name="airi" ]
 [playbgm wait=false storage="pants_mion(loopver)"]
 
-#???
+#？？？
 「おーい、お姉さん。」[p]
 「さっきから全く動かないけど、[l][r]もしかしてパンツ忘れちゃった？」[p]
 
@@ -57,7 +57,7 @@
 [chara_mod name="airi" face="puzzling" ]
 
 
-#???
+#？？？
 「ほへ？」[p]
 
 #主人公
@@ -66,19 +66,27 @@
 
 [chara_mod name="airi" face="default" ]
 
-#???
+#？？？
 「やっぱり忘れてきちゃったわけね。」[p]
 「最近大人っぽいパンツがなぜかどこも品切れでさ。」[p]
 「ちょっと子供っぽいんだけど…」[p]
 「ま、出来たてほやほや新品だから許して。」[p]
 「はいどうぞ！」[p]
 
+;パンツ画像定義
+[image_new name="pants" storage="airi1" layer="front"]
+;パンツ表示
+[image_show name="pants"]
+[wait time=1]
+;パンツ消去
+[image_hide name="pants"]
+
 #主人公
 「助かりました。[l]ありがとうございます。」[p]
 
 [chara_mod name="airi" face="smile" ]
 
-#???
+#？？？
 「いいってことよ！」[p]
 「人間、持ちつ持たれつ、だからね！」[p]
 
@@ -87,13 +95,13 @@
 
 [chara_mod name="airi" face="default" ]
 
-#???
+#？？？
 「いいのいいの、気にしないで。」[p]
 
 #主人公
 「そういうわけには…」[p]
 
-#???
+#？？？
 「んーじゃあそうね。」[p]
 「わたしよくここのプール来るし…」[p]
 
