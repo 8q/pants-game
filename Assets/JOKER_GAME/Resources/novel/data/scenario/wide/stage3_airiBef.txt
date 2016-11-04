@@ -27,15 +27,17 @@
 予測では、今日であと１日で国が滅びる日。[p]
 手は尽くしたけれど、目標のパンツ回収量にはまだ届いていない…。[p]
 
-;キャラクターを表示
-[chara_show name="airi" ]
-[playbgm wait=false storage="pants_airi"]
 
 #？？？
 「お〜〜〜い！」[p]
 「ちょっとー！わたしの声聞こえてる？」[p]
 #主人公
 「愛莉さん…！？」[p]
+
+;キャラクターを表示
+[chara_show name="airi" ]
+[playbgm wait=false storage="pants_airi"]
+
 #愛莉
 「相当思いつめているみたいね…。」[p]
 「で？その後お仕事はどうよ？」[p]
