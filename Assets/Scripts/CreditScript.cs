@@ -59,10 +59,10 @@ public class CreditScript : MonoBehaviour
     }
 
 
-    private IEnumerator BackgroundStart(int fadeCount = 100)
+    private IEnumerator BackgroundStart(int fadeCount = 80)
     {
 
-        float waitSecond = 28f / SpriteList.Count;
+        float waitSecond = 36f / SpriteList.Count;
 
         yield return new WaitForSeconds(10);
 
@@ -149,6 +149,12 @@ new CreditItem(@"《協力》
 Poi
 クランク
 おじょー
+"),
+
+new CreditItem(@"《協力》
+
+テストプレイ（敬称略）
+
 CHO-CHI
 インテグラル長友
 "),
