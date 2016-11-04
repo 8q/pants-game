@@ -1,17 +1,5 @@
 ;チュートリアル用スクリプトファイル
 
-;操作説明の表示
-[bg_new storage="manual"]
-[bg_show]
-[clickable name="confirm" a=0 scale_x=10 scale_y=10]
-[evt name="confirm" target="*start_game" ]
-
-[s]
-
-*start_game
-[bg_new storage="kuro"]
-[bg_show]
-
 ;メッセージ表示
 [showmessage]
 
@@ -81,4 +69,4 @@
 
 「では、レースのたくさんついたパンツの回収に[r]励んでくれたまえ。」[p]
 
-[scene file="pants_stage_1"]
+@jump scene=new file=wide/manual

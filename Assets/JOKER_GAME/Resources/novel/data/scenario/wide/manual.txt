@@ -1,0 +1,10 @@
+;操作説明の表示
+[bg_new storage="manual"]
+[bg_show]
+[clickable name="confirm" a=0 scale_x=10 scale_y=10]
+[evt name="confirm" target="*start_game" ]
+
+[s]
+
+*start_game
+[scene file="pants_stage_1"]
