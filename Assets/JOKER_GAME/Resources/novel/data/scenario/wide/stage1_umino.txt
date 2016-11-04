@@ -19,8 +19,9 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
+[chara_new name="umino" storage=umino1 scale="0.5" x=-2 y=-1 jname="海野" jcolor="#249390"]
 [chara_face name="umino" face="openmouth" storage=umino2 ]
+[chara_new name="kurage" storage=kurage scale="0.5" x=2 y=1]
 
 パンツ回収精鋭部隊に配属されてから１週間後[p]
 
@@ -37,8 +38,10 @@
 こんな仕事辛い、逃げてしまいたい。[p]
 
 ;キャラクターを表示
-[chara_show name="umino" ]
+[chara_show name="umino" wait=false]
+[chara_show name="kurage"]
 [playbgm wait=false storage="pants_umino"]
+
 
 ドンッ[p]
 
