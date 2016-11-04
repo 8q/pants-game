@@ -13,7 +13,7 @@
 [text_show name="_sp_chara_name"]
 
 ;背景の新規定義
-[bg_new storage="poolmorning"]
+[bg_new storage="heya"]
 
 ;背景の表示
 [bg_show ]
@@ -34,18 +34,17 @@
 どうにかして回収させてもらいましょう。[p]
 
 ;背景の新規定義
-[bg_new storage="pool" ]
+[bg_new storage="poolmorning"]
 
 ;背景の表示
 [bg_show ]
-[wait time=1]
 
 #
 〜〜〜プールの更衣室で待つこと10分〜〜〜[p]
 
 ;キャラクターを表示
 [chara_show name="airi" ]
-[playbgm wait=false storage="pants_mion(loopver)"]
+[playbgm wait=false storage=""]
 
 #？？？
 「おーい、お姉さん。」[p]
@@ -74,7 +73,7 @@
 「はいどうぞ！」[p]
 
 ;パンツ画像定義
-[image_new name="pants" storage="airi1" layer="front"]
+[image_new name="pants" storage="airi1" layer="front" scale="0.5" y=1.5]
 ;パンツ表示
 [image_show name="pants"]
 [wait time=1]

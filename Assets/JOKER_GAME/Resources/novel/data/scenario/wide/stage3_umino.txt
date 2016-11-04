@@ -70,7 +70,7 @@
 「クラゲの元に届けてあげて。」[p]
 
 ;パンツ画像定義
-[image_new name="pants" storage="umino3" layer="front"]
+[image_new name="pants" storage="umino3" layer="front" scale="0.5" y=1.5]
 ;パンツ表示
 [image_show name="pants"]
 [wait time=1]
