@@ -19,8 +19,7 @@
 [bg_show ]
 
 ;キャラクターの宣言
-[chara_new name="umino" storage=umino1 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
-[chara_face name="umino" face="openmouth" storage=umino2 ]
+[chara_new name="umino" storage=umino3 scale="0.5" y=-1 jname="海野" jcolor="#249390"]
 [chara_new name=boss storage=sireikan1 scale="0.4" y=-1 jname=指揮官 jcolor="#249390"]
 [chara_face name="boss" face="thumbsup" storage=sireikan2 ]
 [chara_face name="boss" face="puzzling" storage=sireikan3 ]
@@ -30,8 +29,10 @@
 
 #国の偉い人
 「……揺れが収まった？」[p]
+[chara_mod name="boss" face="thumbsup"]
 「レース指数値がぐんぐん正常値に下がっていくぞ！！！」[p]
 「我々は、危機を乗り越えた…！」[p]
+[chara_hide name="boss"]
 
 ;背景復活
 ;背景の新規定義
