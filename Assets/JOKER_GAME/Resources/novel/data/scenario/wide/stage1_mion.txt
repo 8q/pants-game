@@ -34,6 +34,7 @@
 
 ;キャラクターを表示
 [chara_show name="mion" ]
+[playbgm wait=false storage="pants_mion"]
 
 #？？？
 「急になんですか？[l]きもいから声かけないでほしいんですけど。」[p]
@@ -54,7 +55,7 @@
 彼女が気を抜いているこの隙にパンツを———[p]
 
 ;パンツ画像定義
-[image_new name="pants" storage="mion1" layer="front"]
+[image_new name="pants" storage="mion1" layer="front" scale="0.5" y=1.5]
 ;パンツ表示
 [image_show name="pants"]
 [wait time=1]

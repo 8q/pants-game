@@ -34,6 +34,7 @@
 
 ;キャラクターを表示
 [chara_show name="mion" ]
+[playbgm wait=false storage="pants_mion"]
 #mion
 「こーんばーんは。教えられた住所、正しかったみたいね。」[p]
 #主人公

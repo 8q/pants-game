@@ -27,6 +27,7 @@
 [chara_face name="boss" face="puzzling" storage=sireikan3 ]
 
 ;キャラクターを表示
+[playbgm wait=false storage="pants_mion"]
 [show name=mion]
 [show name=boss]
 
@@ -50,7 +51,7 @@
 「こっ、これは…！？」[p]
 
 ;パンツ画像定義
-[image_new name="mion3" storage="mion3" layer="front"]
+[image_new name="mion3" storage="mion3" layer="front" scale="0.5" y=1.5]
 ;パンツ表示
 [image_show name="mion3"]
 [wait time=1]

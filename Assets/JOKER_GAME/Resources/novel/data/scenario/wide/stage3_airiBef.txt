@@ -29,6 +29,7 @@
 
 ;キャラクターを表示
 [chara_show name="airi" ]
+[playbgm wait=false storage="pants_airi"]
 
 #？？？
 「お〜〜〜い！」[p]

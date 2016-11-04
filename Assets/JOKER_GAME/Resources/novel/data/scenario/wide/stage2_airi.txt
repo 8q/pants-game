@@ -29,6 +29,7 @@
 
 ;キャラクターを表示
 [chara_show name="airi" ]
+[playbgm wait=false storage="pants_airi"]
 
 #？？？
 「あなた、この前プールで会った人よね…。」[p]
@@ -61,7 +62,7 @@
 「少しだけ協力するわ。困った時はお互い様、ね？」[p]
 
 ;パンツ画像定義
-[image_new name="airi2" storage="airi2" layer="front"]
+[image_new name="airi2" storage="airi2" layer="front" scale="0.5" y=1.5]
 ;パンツ表示
 [image_show name="airi2"]
 [wait time=1]

@@ -26,6 +26,7 @@
 
 ;キャラクターを表示
 [chara_show name="airi" ]
+[playbgm wait=false storage="pants_airi"]
 
 #airi
 「着いたー！」[p]
@@ -75,7 +76,7 @@
 「どれどれ。」[p]
 
 ;パンツ画像定義
-[image_new name="pants" storage="airi3" layer="front"]
+[image_new name="pants" storage="airi3" layer="front" scale="0.5" y=1.5]
 ;パンツ表示
 [image_show name="pants"]
 [wait time=1]
