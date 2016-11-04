@@ -297,6 +297,7 @@ time=何秒間隔で自動的にストーリーが進むかを設定すること
 	//FlagSkiiping
 	public class AutostartComponent:AbstractComponent
 	{
+
 		public AutostartComponent ()
 		{
 			//必須項目
@@ -313,6 +314,9 @@ time=何秒間隔で自動的にストーリーが進むかを設定すること
 		{
 
 			float time = float.Parse(this.param ["time"]);
+
+			StatusManager.enableNextOrder = true;
+			this.gameManager.nextOrder ();
 
 			//string time = this.param ["time"];
 			this.gameManager.scene.startAuto(time);
