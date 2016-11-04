@@ -28,7 +28,7 @@
 	@sleepgame file="wide/libs/save" target="*loadstart"
 [elsif exp="{evt.caller_name}==button_auto"]
 ;autoの時間はコンフィグなどで設定できる
-	[autostart]
+	[autostart time=2]
 [elsif exp="{evt.caller_name}==button_skip"]
 	[skipstart]
 [elsif exp="{evt.caller_name}==button_title"]
