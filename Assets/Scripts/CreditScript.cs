@@ -123,7 +123,12 @@ new CreditItem(@"《チームPANTS》
 
 きつめ
 しゃんぬ
-わかな
+わかな"),
+
+new CreditItem(@"《チームPANTS》
+
+グラフィック
+
 UN-CHO
 ほわいと納豆"),
 
