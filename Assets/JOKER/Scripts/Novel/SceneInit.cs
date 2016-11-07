@@ -331,7 +331,7 @@ public class SceneInit : MonoBehaviour
 
 
         //this.gameManager.check ();
-        if (Input.GetMouseButtonUp(0) || Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.Z))
+        if (Input.GetMouseButtonUp(0) || Input.GetKeyDown(KeyCode.Return))
         {
             StartCoroutine("ClickButton");
         }
