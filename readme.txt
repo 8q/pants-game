@@ -1,5 +1,5 @@
 
-□　Pick up Pants!
+□　PICK UP PANTS!
 
 
 ■著作権・免責
