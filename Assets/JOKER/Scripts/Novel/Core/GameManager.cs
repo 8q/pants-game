@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Novel
 {
@@ -12,7 +13,7 @@ namespace Novel
 	{
 		private FileManager fm;
 		public  Parser parser;
-		
+
 		public  ImageManager imageManager;
 		public  ScenarioManager scenarioManager;
 		public	StatusManager statusManager;
@@ -75,12 +76,12 @@ namespace Novel
 
 				string str = "<color=green>Novel</color>["+StatusManager.currentScenario+"]:<color=red>Error:"+num+"行目 "+message+"</color>";
 				this.errorMessage.Add (str);
-			
+
 			} else if(type == MessageType.Warning) {
-			
+
 				string str = "<color=green>Novel</color>["+StatusManager.currentScenario+"]:<color=yellow>Warning:"+num+"行目 "+message+"</color>";
 				this.warningMessage.Add (str);
-			
+
 			}
 
 
@@ -115,7 +116,7 @@ namespace Novel
 
 		//実行すべき命令がないか、チェックする
 		public void check(){
-			
+
 		}
 
 		//文字列から即時タグを実行することができます。
@@ -125,7 +126,7 @@ namespace Novel
 		}
 
 		public void loadConfig(){
-		
+
 			Debug.Log ("init GameManager");
 			string config_text = this.fm.load ("config/config");
 
@@ -162,7 +163,7 @@ namespace Novel
 
 			if (sce != null) {
 				this.arrayComponents = sce.arrayComponent;
-		
+
 			} else {
 
 				string script_text = this.fm.load ("scenario/"+scenario_name);
@@ -207,7 +208,7 @@ namespace Novel
 
 		//クリックされて次の命令に行くかをチェックする
 		public void clickNextOrder(){
-		
+
 			//window非表示状態からの復帰の場合
 			if (StatusManager.nextClickShowMessage == true) {
 				StatusManager.nextClickShowMessage = false;
@@ -279,9 +280,14 @@ namespace Novel
 
 		//ゲームをロードします
 		public void loadData(string data_name){
-		
+
 			Debug.Log ("load files ");
 			SaveObject sobj =  this.saveManager.getSaveData(data_name);
+
+			if(sobj == null){
+				SceneManager.LoadScene("load_error");
+				return;
+			}
 
 			Dictionary<string,Image> dic = sobj.dicImage;
 
@@ -367,4 +373,3 @@ namespace Novel
 
 
 }
-
