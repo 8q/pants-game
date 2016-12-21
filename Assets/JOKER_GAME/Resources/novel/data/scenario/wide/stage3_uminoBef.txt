@@ -14,6 +14,7 @@
 
 ;背景の新規定義
 [bg_new storage="kuro"]
+
 ;背景の表示
 [bg_show ]
 

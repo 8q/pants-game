@@ -15,6 +15,9 @@
 ;背景の新規定義
 [bg_new storage="heya"]
 
+;ステージBGMの開放
+[savebgm sound="Stage1"]
+
 ;背景の表示
 [bg_show ]
 
