@@ -38,6 +38,7 @@
 ;キャラクターを表示
 [chara_show name="mion" ]
 [playbgm wait=false storage="pants_mion"]
+[savebgm sound="ThemeMion"]
 
 #？？？
 「急になんですか？[l]きもいから声かけないでほしいんですけど。」[p]

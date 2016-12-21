@@ -45,6 +45,8 @@
 [chara_show name="kurage"]
 [playbgm wait=false storage="pants_umino"]
 
+;BGMの開放
+[savebgm sound="ThemeUmino"]
 
 ドンッ[p]
 

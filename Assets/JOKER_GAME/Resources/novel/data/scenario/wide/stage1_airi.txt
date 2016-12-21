@@ -48,6 +48,7 @@
 ;キャラクターを表示
 [chara_show name="airi" ]
 [playbgm wait=false storage="pants_airi"]
+[savebgm sound="ThemeAiri"]
 
 #？？？
 「おーい、お姉さん。」[p]
