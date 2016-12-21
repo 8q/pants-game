@@ -33,7 +33,7 @@ public enum SoundTrack : int
     /// <summary>
     /// 4nzu
     /// </summary>
-    Stage4 = ThemeMion,
+    Stage4 = ThemeUmino,
 
     /// <summary>
     /// D

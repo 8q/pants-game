@@ -10,7 +10,7 @@ public class SoundTrackSystemScript : MonoBehaviour {
 
 	public AudioSource audiosource;
 
-	public GameObject[] buttons;
+	public UnityEngine.UI.Button[] buttons;
 
 	public GameObject mark;
 
@@ -20,9 +20,15 @@ public class SoundTrackSystemScript : MonoBehaviour {
 
 	public Sprite stopSprite;
 
+	private const int MUSIC_COUNT = 7;
+
 	// Use this for initialization
 	void Start () {
 		MusicIndex = 0;
+		//Openingだけは最初からフラグを立てておく
+		if (!AllPlayerPrefs.LoadSoundTrack ().HasTrackFlag (SoundTrack.Opening)) {
+			AllPlayerPrefs.SaveSoundTrack (SoundTrack.Opening);
+		}
 	}
 
 	public void OnPlayButton(){
@@ -42,7 +48,9 @@ public class SoundTrackSystemScript : MonoBehaviour {
 	}
 
 	public void ProgressPlay(){
-		MusicIndex = (MusicIndex + 1) % 7;
+		do {
+			MusicIndex = (MusicIndex + 1) % MUSIC_COUNT;
+		} while (!buttons [MusicIndex].interactable);
 		_Play (MusicIndex);
 	}
 
@@ -52,7 +60,9 @@ public class SoundTrackSystemScript : MonoBehaviour {
 
 	//眠いよ
 	public void BackPlay(){
-		MusicIndex = (MusicIndex - 1 + 7) % 7;
+		do {
+			MusicIndex = (MusicIndex - 1 + MUSIC_COUNT) % MUSIC_COUNT;
+		} while(!buttons [MusicIndex].interactable);
 		_Play (MusicIndex);
 	}
 
