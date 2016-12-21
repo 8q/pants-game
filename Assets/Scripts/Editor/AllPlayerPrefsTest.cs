@@ -108,4 +108,30 @@ public class AllPlayerPrefsTest {
     }
 
 
+
+    [Test]
+    public void EditorDebugTest1()
+    {
+        var s1 = SoundTrack.Opening;
+        
+        var s2 = AllPlayerPrefs.LoadSoundTrack();
+
+        // テスト用の後始末（データ削除）
+     //   AllPlayerPrefs.DeleteSoundTrack();
+
+
+        // ロードした s2 に s1(ThemeAiri)が含まれているか。
+        // つまり 
+        // var result = (s2 & SoundTrack.ThemeAiri) == (SoundTrack.ThemeAiri);
+        // var result = (s2 & s1) == s1;
+        var result = s2.HasTrackFlag(s1);
+
+        Debug.Log(s2);
+
+        //Assert
+        // わかりやすいように IsTrue に変更
+        // Assert.AreEqual(s1, s2 & s1);
+        Assert.IsTrue(result);
+    }
+
 }

@@ -15,6 +15,10 @@
 ;背景の新規定義
 [bg_new storage="eraiheya"]
 
+;ステージBGMの開放
+[savebgm sound="Stage3"]
+[savebgm sound="ThemeMion"]
+
 ;背景の表示
 [bg_show ]
 

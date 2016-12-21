@@ -61,7 +61,7 @@ public class AllPlayerPrefs : MonoBehaviour
 {
 
     const string SoundTrackKey = "SoundTrack";
-
+    
     public static void SaveSoundTrack(SoundTrack soundTrack)
     {
         int flags = (int)(soundTrack | LoadSoundTrack());
