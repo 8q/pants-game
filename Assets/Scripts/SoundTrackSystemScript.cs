@@ -42,7 +42,7 @@ public class SoundTrackSystemScript : MonoBehaviour {
 	}
 
 	public void ProgressPlay(){
-		MusicIndex = (MusicIndex + 1) % 8;
+		MusicIndex = (MusicIndex + 1) % 7;
 		_Play (MusicIndex);
 	}
 
@@ -52,7 +52,7 @@ public class SoundTrackSystemScript : MonoBehaviour {
 
 	//眠いよ
 	public void BackPlay(){
-		MusicIndex = (MusicIndex - 1 + 8) % 8;
+		MusicIndex = (MusicIndex - 1 + 7) % 7;
 		_Play (MusicIndex);
 	}
 
