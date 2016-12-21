@@ -49,6 +49,14 @@ public enum SoundTrack : int
 
 
 
+public static class AllPlayerPrefsExtentions{
+    public static bool HasTrackFlag(this SoundTrack soundTrack, SoundTrack content)
+    {
+        return (soundTrack & content) == content;
+    }
+}
+
+
 public class AllPlayerPrefs : MonoBehaviour
 {
 
@@ -66,6 +74,7 @@ public class AllPlayerPrefs : MonoBehaviour
         return (SoundTrack)PlayerPrefs.GetInt(SoundTrackKey, 0);
     }
 
+    /*
     /// <summary>
     /// サウンドトラックが利用可能かを調べるためのユーティリティメソッド
     /// </summary>
@@ -75,7 +84,7 @@ public class AllPlayerPrefs : MonoBehaviour
     public static bool IsSoundTrackAvailable(SoundTrack check,SoundTrack content)
     {
         return (check & content) == content;
-    }
+    }*/
 
     /// <summary>
     /// for Test

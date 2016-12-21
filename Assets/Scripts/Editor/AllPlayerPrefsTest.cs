@@ -73,7 +73,7 @@ public class AllPlayerPrefsTest {
         // つまり 
         // var result = (s2 & SoundTrack.ThemeAiri) == (SoundTrack.ThemeAiri);
         // var result = (s2 & s1) == s1;
-        var result = AllPlayerPrefs.IsSoundTrackAvailable(s2,s1);
+        var result = s2.HasTrackFlag(s1);
 
         //Assert
         // わかりやすいように IsTrue に変更
@@ -99,7 +99,7 @@ public class AllPlayerPrefsTest {
         // つまり 
         // var result = (s2 & SoundTrack.ThemeAiri) == (SoundTrack.ThemeAiri);
         // var result = (s2 & s1) == s1;
-        var result = AllPlayerPrefs.IsSoundTrackAvailable(s2, s1);
+        var result = s2.HasTrackFlag(s1);
 
         //Assert
         // わかりやすいように IsTrue に変更
